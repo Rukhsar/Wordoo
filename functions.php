@@ -52,6 +52,7 @@ include ( get_template_directory().'/inc/theme-styles.php');
 include ( get_template_directory().'/inc/theme-scripts.php');
 
 include ( get_template_directory().'/inc/plugin-install.php');
+include ( get_template_directory().'/inc/post-types/post-types.php');
 
 // Adding OptionTree into themes
 /**
