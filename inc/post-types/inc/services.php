@@ -21,6 +21,7 @@ function rukhsar_services_post_type() {
             'capability_type' => 'post',
             'rewrite' => array("slug" => "services"), // Permalinks format
             'menu_position' => 5,
+            'menu_icon'           => 'dashicons-lightbulb',
             'exclude_from_search' => true
         )
     );

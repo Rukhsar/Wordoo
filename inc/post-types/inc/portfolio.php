@@ -21,6 +21,7 @@ function rukhsar_portfolio_post_type() {
             'capability_type' => 'post',
             'rewrite' => array("slug" => "portfolio"), // Permalinks format
             'menu_position' => 5,
+            'menu_icon'           => 'dashicons-laptop',
             'exclude_from_search' => true
         )
     );

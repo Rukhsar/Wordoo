@@ -935,7 +935,7 @@ Recommended size 128x128px', 'rukhsar' ),
 
             array(
                 'id'          => 'about_section_tab',
-                'label'       => esc_html__('About & Team', 'rukhsar' ),
+                'label'       => esc_html__('About', 'rukhsar' ),
                 'desc'        => '',
                 'std'         => '',
                 'type'        => 'tab',
@@ -1476,21 +1476,21 @@ Recommended size 128x128px', 'rukhsar' ),
 
 
 
-            array(
-                'id'          => 'parallax_one',
-                'label'       => esc_html__('Parallax One/Testimonial Setting', 'rukhsar' ),
-                'desc'        => '',
-                'std'         => '',
-                'type'        => 'tab',
-                'section'     => 'parallax_section_big_background_image',
-                'rows'        => '',
-                'post_type'   => '',
-                'taxonomy'    => '',
-                'min_max_step'=> '',
-                'class'       => '',
-                'condition'   => '',
-                'operator'    => 'and'
-            ),
+            // array(
+            //     'id'          => 'parallax_one',
+            //     'label'       => esc_html__('Parallax One/Testimonial Setting', 'rukhsar' ),
+            //     'desc'        => '',
+            //     'std'         => '',
+            //     'type'        => 'tab',
+            //     'section'     => 'parallax_section_big_background_image',
+            //     'rows'        => '',
+            //     'post_type'   => '',
+            //     'taxonomy'    => '',
+            //     'min_max_step'=> '',
+            //     'class'       => '',
+            //     'condition'   => '',
+            //     'operator'    => 'and'
+            // ),
             array(
                 'id'          => 'parallax_image_one',
                 'label'       => esc_html__('Parallax Image', 'rukhsar' ),
@@ -1682,7 +1682,7 @@ Title in the list is for testimonial author.', 'rukhsar' ),
             array(
                 'id'          => 'yt_qt',
                 'label'       => esc_html__('Youtube Video Quality', 'rukhsar' ),
-                'desc'        => esc_html__('Insert your youtube video quality here. <br>You can input <b>small</b>, <b>medium</b>, <b>large</b>, <b>hd720</b>, <b>hd1080</b>, <b>highres</b>. 
+                'desc'        => esc_html__('Insert your youtube video quality here. <br>You can input <b>small</b>, <b>medium</b>, <b>large</b>, <b>hd720</b>, <b>hd1080</b>, <b>highres</b>.
 		<br> Default value is large', 'rukhsar' ),
                 'std'         => '',
                 'type'        => 'text',

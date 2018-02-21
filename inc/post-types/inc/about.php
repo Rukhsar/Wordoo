@@ -20,6 +20,7 @@ function rukhsar_about_post_type() {
             'capability_type' => 'post',
             'rewrite' => array("slug" => "about"), // Permalinks format
             'menu_position' => 5,
+            'menu_icon'           => 'dashicons-businessman',
             'exclude_from_search' => true
         )
     );

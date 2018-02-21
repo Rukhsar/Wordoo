@@ -21,6 +21,7 @@ function rukhsar_contact_post_type() {
             'capability_type' => 'post',
             'rewrite' => array("slug" => "contact"), // Permalinks format
             'menu_position' => 5,
+            'menu_icon'           => 'dashicons-testimonial',
             'exclude_from_search' => true
         )
     );

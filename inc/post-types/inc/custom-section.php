@@ -21,6 +21,7 @@ function rukhsar_custom_section_post_type() {
             'capability_type' => 'post',
             'rewrite' => array("slug" => "custom-section"), // Permalinks format
             'menu_position' => 5,
+            'menu_icon'           => 'dashicons-layout',
             'exclude_from_search' => true
         )
     );
