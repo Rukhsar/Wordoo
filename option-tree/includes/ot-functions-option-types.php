@@ -43,7 +43,7 @@ if ( ! function_exists( 'ot_display_by_type' ) ) {
     if ( function_exists( $function_name_by_type ) ) {
       call_user_func( $function_name_by_type, $args );
     } else {
-      echo '<p>' . esc_html__( 'Sorry, this function does not exist', 'cizarua' ) . '</p>';
+      echo '<p>' . esc_html__( 'Sorry, this function does not exist', 'rukhsar' ) . '</p>';
     }
     
   }
@@ -131,7 +131,7 @@ if ( ! function_exists( 'ot_type_background' ) ) {
             
             echo '<select name="' . esc_attr( $field_name ) . '[background-repeat]" id="' . esc_attr( $field_id ) . '-repeat" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
               
-              echo '<option value="">' . esc_html__( 'background-repeat', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( 'background-repeat', 'rukhsar' ) . '</option>';
               foreach ( ot_recognized_background_repeat( $field_id ) as $key => $value ) {
               
                 echo '<option value="' . esc_attr( $key ) . '" ' . selected( $background_repeat, $key, false ) . '>' . esc_attr( $value ) . '</option>';
@@ -149,7 +149,7 @@ if ( ! function_exists( 'ot_type_background' ) ) {
             
             echo '<select name="' . esc_attr( $field_name ) . '[background-attachment]" id="' . esc_attr( $field_id ) . '-attachment" class="option-tree-ui-select ' . $field_class . '">';
               
-              echo '<option value="">' . esc_html__( 'background-attachment', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( 'background-attachment', 'rukhsar' ) . '</option>';
               
               foreach ( ot_recognized_background_attachment( $field_id ) as $key => $value ) {
               
@@ -168,7 +168,7 @@ if ( ! function_exists( 'ot_type_background' ) ) {
             
             echo '<select name="' . esc_attr( $field_name ) . '[background-position]" id="' . esc_attr( $field_id ) . '-position" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
               
-              echo '<option value="">' . esc_html__( 'background-position', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( 'background-position', 'rukhsar' ) . '</option>';
               
               foreach ( ot_recognized_background_position( $field_id ) as $key => $value ) {
                 
@@ -221,7 +221,7 @@ if ( ! function_exists( 'ot_type_background' ) ) {
             
             } else {
             
-              echo '<input type="text" name="' . esc_attr( $field_name ) . '[background-size]" id="' . esc_attr( $field_id ) . '-size" value="' . ( isset( $field_value['background-size'] ) ? esc_attr( $field_value['background-size'] ) : '' ) . '" class="widefat ot-background-size-input option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'background-size', 'cizarua' ) . '" />';
+              echo '<input type="text" name="' . esc_attr( $field_name ) . '[background-size]" id="' . esc_attr( $field_id ) . '-size" value="' . ( isset( $field_value['background-size'] ) ? esc_attr( $field_value['background-size'] ) : '' ) . '" class="widefat ot-background-size-input option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'background-size', 'rukhsar' ) . '" />';
               
             }
           
@@ -235,10 +235,10 @@ if ( ! function_exists( 'ot_type_background' ) ) {
           echo '<div class="option-tree-ui-upload-parent">';
             
             /* input */
-            echo '<input type="text" name="' . esc_attr( $field_name ) . '[background-image]" id="' . esc_attr( $field_id ) . '" value="' . ( isset( $field_value['background-image'] ) ? esc_attr( $field_value['background-image'] ) : '' ) . '" class="widefat option-tree-ui-upload-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'background-image', 'cizarua' ) . '" />';
+            echo '<input type="text" name="' . esc_attr( $field_name ) . '[background-image]" id="' . esc_attr( $field_id ) . '" value="' . ( isset( $field_value['background-image'] ) ? esc_attr( $field_value['background-image'] ) : '' ) . '" class="widefat option-tree-ui-upload-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'background-image', 'rukhsar' ) . '" />';
             
             /* add media button */
-            echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . $post_id . '" title="' . esc_html__( 'Add Media', 'cizarua' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'cizarua' ) . '</a>';
+            echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . $post_id . '" title="' . esc_html__( 'Add Media', 'rukhsar' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'rukhsar' ) . '</a>';
           
           echo '</div>';
           
@@ -254,7 +254,7 @@ if ( ! function_exists( 'ot_type_background' ) ) {
               if ( preg_match( '/\.(?:jpe?g|png|gif|ico)$/i', $field_value['background-image'] ) )
                 echo '<div class="option-tree-ui-image-wrap"><img src="' . esc_url( $field_value['background-image'] ) . '" alt="" /></div>';
               
-              echo '<a href="javascript:(void);" class="option-tree-ui-remove-media option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Media', 'cizarua' ) . '"><span class="icon ot-icon-minus-circle"></span>' . esc_html__( 'Remove Media', 'cizarua' ) . '</a>';
+              echo '<a href="javascript:(void);" class="option-tree-ui-remove-media option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Media', 'rukhsar' ) . '"><span class="icon ot-icon-minus-circle"></span>' . esc_html__( 'Remove Media', 'rukhsar' ) . '</a>';
               
             echo '</div>';
             
@@ -313,7 +313,7 @@ if ( ! function_exists( 'ot_type_border' ) ) {
 
           $width = isset( $field_value['width'] ) ? esc_attr( $field_value['width'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-sixth"><input type="text" name="' . esc_attr( $field_name ) . '[width]" id="' . esc_attr( $field_id ) . '-width" value="' . esc_attr( $width ) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'width', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-sixth"><input type="text" name="' . esc_attr( $field_name ) . '[width]" id="' . esc_attr( $field_id ) . '-width" value="' . esc_attr( $width ) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'width', 'rukhsar' ) . '" /></div>';
 
         }
 
@@ -324,7 +324,7 @@ if ( ! function_exists( 'ot_type_border' ) ) {
           
             echo '<select name="' . esc_attr( $field_name ) . '[unit]" id="' . esc_attr( $field_id ) . '-unit" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
     
-              echo '<option value="">' . esc_html__( 'unit', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( 'unit', 'rukhsar' ) . '</option>';
     
               foreach ( ot_recognized_border_unit_types( $field_id ) as $unit ) {
                 echo '<option value="' . esc_attr( $unit ) . '"' . ( isset( $field_value['unit'] ) ? selected( $field_value['unit'], $unit, false ) : '' ) . '>' . esc_attr( $unit ) . '</option>';
@@ -343,7 +343,7 @@ if ( ! function_exists( 'ot_type_border' ) ) {
           
             echo '<select name="' . esc_attr( $field_name ) . '[style]" id="' . esc_attr( $field_id ) . '-style" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
     
-              echo '<option value="">' . esc_html__( 'style', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( 'style', 'rukhsar' ) . '</option>';
     
               foreach ( ot_recognized_border_style_types( $field_id ) as $key => $style ) {
                 echo '<option value="' . esc_attr( $key ) . '"' . ( isset( $field_value['style'] ) ? selected( $field_value['style'], $key, false ) : '' ) . '>' . esc_attr( $style ) . '</option>';
@@ -436,7 +436,7 @@ if ( ! function_exists( 'ot_type_box_shadow' ) ) {
 
           $offset_x = isset( $field_value['offset-x'] ) ? esc_attr( $field_value['offset-x'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-arrows-h ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[offset-x]" id="' . esc_attr( $field_id ) . '-offset-x" value="' . $offset_x . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'offset-x', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-arrows-h ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[offset-x]" id="' . esc_attr( $field_id ) . '-offset-x" value="' . $offset_x . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'offset-x', 'rukhsar' ) . '" /></div>';
 
         }
         
@@ -445,7 +445,7 @@ if ( ! function_exists( 'ot_type_box_shadow' ) ) {
 
           $offset_y = isset( $field_value['offset-y'] ) ? esc_attr( $field_value['offset-y'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-arrows-v ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[offset-y]" id="' . esc_attr( $field_id ) . '-offset-y" value="' . $offset_y . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'offset-y', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-arrows-v ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[offset-y]" id="' . esc_attr( $field_id ) . '-offset-y" value="' . $offset_y . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'offset-y', 'rukhsar' ) . '" /></div>';
 
         }
         
@@ -454,7 +454,7 @@ if ( ! function_exists( 'ot_type_box_shadow' ) ) {
 
           $blur_radius = isset( $field_value['blur-radius'] ) ? esc_attr( $field_value['blur-radius'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-circle ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[blur-radius]" id="' . esc_attr( $field_id ) . '-blur-radius" value="' . $blur_radius . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'blur-radius', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-circle ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[blur-radius]" id="' . esc_attr( $field_id ) . '-blur-radius" value="' . $blur_radius . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'blur-radius', 'rukhsar' ) . '" /></div>';
 
         }
         
@@ -463,7 +463,7 @@ if ( ! function_exists( 'ot_type_box_shadow' ) ) {
 
           $spread_radius = isset( $field_value['spread-radius'] ) ? esc_attr( $field_value['spread-radius'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-arrows-alt ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[spread-radius]" id="' . esc_attr( $field_id ) . '-spread-radius" value="' . $spread_radius . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'spread-radius', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-fifth"><span class="ot-icon-arrows-alt ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[spread-radius]" id="' . esc_attr( $field_id ) . '-spread-radius" value="' . $spread_radius . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'spread-radius', 'rukhsar' ) . '" /></div>';
 
         }
         
@@ -535,7 +535,7 @@ if ( ! function_exists( 'ot_type_category_checkbox' ) ) {
             echo '</p>';
           } 
         } else {
-          echo '<p>' . esc_html__( 'No Categories Found', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'No Categories Found', 'rukhsar' ) . '</p>';
         }
       
       echo '</div>';
@@ -584,12 +584,12 @@ if ( ! function_exists( 'ot_type_category_select' ) ) {
         
         /* has cats */
         if ( ! empty( $categories ) ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose One', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose One', 'rukhsar' ) . ' --</option>';
           foreach ( $categories as $category ) {
             echo '<option value="' . esc_attr( $category->term_id ) . '"' . selected( $field_value, $category->term_id, false ) . '>' . esc_attr( $category->name ) . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Categories Found', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Categories Found', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -815,7 +815,7 @@ if ( ! function_exists( 'ot_type_custom_post_type_checkbox' ) ) {
             echo '</p>';
           }
         } else {
-          echo '<p>' . esc_html__( 'No Posts Found', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'No Posts Found', 'rukhsar' ) . '</p>';
         }
         
       echo '</div>';
@@ -867,13 +867,13 @@ if ( ! function_exists( 'ot_type_custom_post_type_select' ) ) {
         
         /* has posts */
         if ( is_array( $my_posts ) && ! empty( $my_posts ) ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose One', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose One', 'rukhsar' ) . ' --</option>';
           foreach( $my_posts as $my_post ) {
             $post_title = '' != $my_post->post_title ? $my_post->post_title : 'Untitled';
             echo '<option value="' . esc_attr( $my_post->ID ) . '"' . selected( $field_value, $my_post->ID, false ) . '>' . $post_title . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Posts Found', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Posts Found', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -1042,7 +1042,7 @@ if ( ! function_exists( 'ot_type_dimension' ) ) {
 
           $width = isset( $field_value['width'] ) ? esc_attr( $field_value['width'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-third"><span class="ot-icon-arrows-h ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[width]" id="' . esc_attr( $field_id ) . '-width" value="' . esc_attr( $width ) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'width', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-third"><span class="ot-icon-arrows-h ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[width]" id="' . esc_attr( $field_id ) . '-width" value="' . esc_attr( $width ) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'width', 'rukhsar' ) . '" /></div>';
 
         }
 
@@ -1051,7 +1051,7 @@ if ( ! function_exists( 'ot_type_dimension' ) ) {
 
           $height = isset( $field_value['height'] ) ? esc_attr( $field_value['height'] ) : '';
 
-          echo '<div class="ot-option-group ot-option-group--one-third"><span class="ot-icon-arrows-v ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[height]" id="' . esc_attr( $field_id ) . '-height" value="' . esc_attr( $height ) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'height', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group ot-option-group--one-third"><span class="ot-icon-arrows-v ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[height]" id="' . esc_attr( $field_id ) . '-height" value="' . esc_attr( $height ) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'height', 'rukhsar' ) . '" /></div>';
 
         }
         
@@ -1062,7 +1062,7 @@ if ( ! function_exists( 'ot_type_dimension' ) ) {
           
             echo '<select name="' . esc_attr( $field_name ) . '[unit]" id="' . esc_attr( $field_id ) . '-unit" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
     
-              echo '<option value="">' . esc_html__( 'unit', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( 'unit', 'rukhsar' ) . '</option>';
     
               foreach ( ot_recognized_dimension_unit_types( $field_id ) as $unit ) {
                 echo '<option value="' . esc_attr( $unit ) . '"' . ( isset( $field_value['unit'] ) ? selected( $field_value['unit'], $unit, false ) : '' ) . '>' . esc_attr( $unit ) . '</option>';
@@ -1156,15 +1156,15 @@ if ( ! function_exists( 'ot_type_gallery' ) ) {
           
           echo '
           <div class="ot-gallery-buttons">
-            <a href="#" class="option-tree-ui-button button button-secondary hug-left ot-gallery-delete">' . esc_html__( 'Delete Gallery', 'cizarua' ) . '</a>
-            <a href="#" class="option-tree-ui-button button button-primary right hug-right ot-gallery-edit">' . esc_html__( 'Edit Gallery', 'cizarua' ) . '</a>
+            <a href="#" class="option-tree-ui-button button button-secondary hug-left ot-gallery-delete">' . esc_html__( 'Delete Gallery', 'rukhsar' ) . '</a>
+            <a href="#" class="option-tree-ui-button button button-primary right hug-right ot-gallery-edit">' . esc_html__( 'Edit Gallery', 'rukhsar' ) . '</a>
           </div>';
         
         } else {
         
           echo '
           <div class="ot-gallery-buttons">
-            <a href="#" class="option-tree-ui-button button button-primary right hug-right ot-gallery-edit">' . esc_html__( 'Create Gallery', 'cizarua' ) . '</a>
+            <a href="#" class="option-tree-ui-button button button-primary right hug-right ot-gallery-edit">' . esc_html__( 'Create Gallery', 'rukhsar' ) . '</a>
           </div>';
         
         }
@@ -1229,9 +1229,9 @@ if ( ! function_exists( 'ot_type_google_fonts' ) ) {
             /* build font family */
             $family = isset( $value['family'] ) ? $value['family'] : '';
             echo '<div class="option-tree-google-font-family">';
-              echo '<a href="javascript:void(0);" class="js-remove-google-font option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Google Font', 'cizarua' ) . '"><span class="icon ot-icon-minus-circle"/>' . esc_html__( 'Remove Google Font', 'cizarua' ) . '</a>';
+              echo '<a href="javascript:void(0);" class="js-remove-google-font option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Google Font', 'rukhsar' ) . '"><span class="icon ot-icon-minus-circle"/>' . esc_html__( 'Remove Google Font', 'rukhsar' ) . '</a>';
               echo '<select name="' . esc_attr( $field_name ) . '[' . $key . '][family]" id="' . esc_attr( $field_id ) . '-' . $key . '" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
-                echo '<option value="">' . esc_html__( '-- Choose One --', 'cizarua' ) . '</option>';
+                echo '<option value="">' . esc_html__( '-- Choose One --', 'rukhsar' ) . '</option>';
                 foreach ( ot_recognized_google_font_families( $field_id ) as $family_key => $family_value ) {
                   echo '<option value="' . esc_attr( $family_key ) . '" ' . selected( $family, $family_key, false ) . '>' . esc_html( $family_value ) . '</option>';
                 }
@@ -1272,9 +1272,9 @@ if ( ! function_exists( 'ot_type_google_fonts' ) ) {
         
           /* build font family */
           echo '<div class="option-tree-google-font-family">';
-            echo '<a href="javascript:void(0);" class="js-remove-google-font option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Google Font', 'cizarua' ) . '"><span class="icon ot-icon-minus-circle"/>' . esc_html__( 'Remove Google Font', 'cizarua' ) . '</a>';
+            echo '<a href="javascript:void(0);" class="js-remove-google-font option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Google Font', 'rukhsar' ) . '"><span class="icon ot-icon-minus-circle"/>' . esc_html__( 'Remove Google Font', 'rukhsar' ) . '</a>';
             echo '<select name="' . esc_attr( $field_name ) . '[%key%][family]" id="' . esc_attr( $field_id ) . '-%key%" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
-              echo '<option value="">' . esc_html__( '-- Choose One --', 'cizarua' ) . '</option>';
+              echo '<option value="">' . esc_html__( '-- Choose One --', 'rukhsar' ) . '</option>';
               foreach ( ot_recognized_google_font_families( $field_id ) as $family_key => $family_value ) {
                 echo '<option value="' . esc_attr( $family_key ) . '">' . esc_html( $family_value ) . '</option>';
               }
@@ -1295,7 +1295,7 @@ if ( ! function_exists( 'ot_type_google_fonts' ) ) {
         
         echo '</div>';
         
-        echo '<a href="javascript:void(0);" class="js-add-google-font option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add Google Font', 'cizarua' ) . '">' . esc_html__( 'Add Google Font', 'cizarua' ) . '</a>';
+        echo '<a href="javascript:void(0);" class="js-add-google-font option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add Google Font', 'rukhsar' ) . '">' . esc_html__( 'Add Google Font', 'rukhsar' ) . '</a>';
         
       echo '</div>';
       
@@ -1381,11 +1381,11 @@ if ( ! function_exists( 'ot_type_link_color' ) ) {
 
         /* allow fields to be filtered */
         $ot_recognized_link_color_fields = apply_filters( 'ot_recognized_link_color_fields', array(
-          'link'    => _x( 'Standard', 'color picker', 'cizarua' ),
-          'hover'   => _x( 'Hover', 'color picker', 'cizarua' ),
-          'active'  => _x( 'Active', 'color picker', 'cizarua' ),
-          'visited' => _x( 'Visited', 'color picker', 'cizarua' ),
-          'focus'   => _x( 'Focus', 'color picker', 'cizarua' )
+          'link'    => _x( 'Standard', 'color picker', 'rukhsar' ),
+          'hover'   => _x( 'Hover', 'color picker', 'rukhsar' ),
+          'active'  => _x( 'Active', 'color picker', 'rukhsar' ),
+          'visited' => _x( 'Visited', 'color picker', 'rukhsar' ),
+          'focus'   => _x( 'Focus', 'color picker', 'rukhsar' )
         ), $field_id );
 
         /* build link color fields */
@@ -1494,10 +1494,10 @@ if ( ! function_exists( 'ot_type_list_item' ) ) {
         echo '</ul>';
         
         /* button */
-        echo '<a href="javascript:void(0);" class="option-tree-list-item-add option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add New', 'cizarua' ) . '">' . esc_html__( 'Add New', 'cizarua' ) . '</a>';
+        echo '<a href="javascript:void(0);" class="option-tree-list-item-add option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add New', 'rukhsar' ) . '">' . esc_html__( 'Add New', 'rukhsar' ) . '</a>';
         
         /* description */
-        $list_desc = $sortable ? esc_html__( 'You can re-order with drag & drop, the order will update after saving.', 'cizarua' ) : '';
+        $list_desc = $sortable ? esc_html__( 'You can re-order with drag & drop, the order will update after saving.', 'rukhsar' ) : '';
         echo '<div class="list-item-description">' . apply_filters( 'ot_list_item_description', $list_desc, $field_id ) . '</div>';
       
       echo '</div>';
@@ -1547,7 +1547,7 @@ if ( ! function_exists( 'ot_type_measurement' ) ) {
         /* build measurement */
         echo '<select name="' . esc_attr( $field_name ) . '[1]" id="' . esc_attr( $field_id ) . '-1" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
           
-          echo '<option value="">' . esc_html__( 'unit', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'unit', 'rukhsar' ) . '</option>';
           
           foreach ( ot_measurement_unit_types( $field_id ) as $unit ) {
             echo '<option value="' . esc_attr( $unit ) . '"' . ( isset( $field_value[1] ) ? selected( $field_value[1], $unit, false ) : '' ) . '>' . esc_attr( $unit ) . '</option>';
@@ -1667,7 +1667,7 @@ if ( ! function_exists( 'ot_type_on_off' ) ) {
              * @param string $field_id The field ID.
              * @param string $filter_id For filtering both on/off label with one function.
              */
-            'label'   => apply_filters( 'ot_on_off_switch_on_label', esc_html__( 'On', 'cizarua' ), $field_id, 'on' )
+            'label'   => apply_filters( 'ot_on_off_switch_on_label', esc_html__( 'On', 'rukhsar' ), $field_id, 'on' )
           ),
           array(
             /**
@@ -1689,7 +1689,7 @@ if ( ! function_exists( 'ot_type_on_off' ) ) {
              * @param string $field_id The field ID.
              * @param string $filter_id For filtering both on/off label with one function.
              */
-            'label'   => apply_filters( 'ot_on_off_switch_off_label', esc_html__( 'Off', 'cizarua' ), $field_id, 'off' )
+            'label'   => apply_filters( 'ot_on_off_switch_off_label', esc_html__( 'Off', 'rukhsar' ), $field_id, 'off' )
           )
         );
 
@@ -1767,7 +1767,7 @@ if ( ! function_exists( 'ot_type_page_checkbox' ) ) {
           echo '</p>';
         }
       } else {
-        echo '<p>' . esc_html__( 'No Pages Found', 'cizarua' ) . '</p>';
+        echo '<p>' . esc_html__( 'No Pages Found', 'rukhsar' ) . '</p>';
       }
       
       echo '</div>';
@@ -1816,13 +1816,13 @@ if ( ! function_exists( 'ot_type_page_select' ) ) {
         
         /* has pages */
         if ( is_array( $my_posts ) && ! empty( $my_posts ) ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose One', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose One', 'rukhsar' ) . ' --</option>';
           foreach( $my_posts as $my_post ) {
             $post_title = '' != $my_post->post_title ? $my_post->post_title : 'Untitled';
             echo '<option value="' . esc_attr( $my_post->ID ) . '"' . selected( $field_value, $my_post->ID, false ) . '>' . $post_title . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Pages Found', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Pages Found', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -1878,7 +1878,7 @@ if ( ! function_exists( 'ot_type_post_checkbox' ) ) {
             echo '</p>';
           } 
         } else {
-          echo '<p>' . esc_html__( 'No Posts Found', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'No Posts Found', 'rukhsar' ) . '</p>';
         }
         
       echo '</div>';
@@ -1927,13 +1927,13 @@ if ( ! function_exists( 'ot_type_post_select' ) ) {
         
         /* has posts */
         if ( is_array( $my_posts ) && ! empty( $my_posts ) ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose One', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose One', 'rukhsar' ) . ' --</option>';
           foreach( $my_posts as $my_post ) {
             $post_title = '' != $my_post->post_title ? $my_post->post_title : 'Untitled';
             echo '<option value="' . esc_attr( $my_post->ID ) . '"' . selected( $field_value, $my_post->ID, false ) . '>' . $post_title . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Posts Found', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Posts Found', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -2166,12 +2166,12 @@ if ( ! function_exists( 'ot_type_sidebar_select' ) ) {
 
         /* has sidebars */
         if ( count( $sidebars ) ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose Sidebar', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose Sidebar', 'rukhsar' ) . ' --</option>';
           foreach ( $sidebars as $id => $sidebar ) {
             echo '<option value="' . esc_attr( $id ) . '"' . selected( $field_value, $id, false ) . '>' . esc_attr( $sidebar ) . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Sidebars', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Sidebars', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -2243,10 +2243,10 @@ if ( ! function_exists( 'ot_type_slider' ) ) {
         echo '</ul>';
         
         /* button */
-        echo '<a href="javascript:void(0);" class="option-tree-list-item-add option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add New', 'cizarua' ) . '">' . esc_html__( 'Add New', 'cizarua' ) . '</a>';
+        echo '<a href="javascript:void(0);" class="option-tree-list-item-add option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add New', 'rukhsar' ) . '">' . esc_html__( 'Add New', 'rukhsar' ) . '</a>';
         
         /* description */
-        echo '<div class="list-item-description">' . esc_html__( 'You can re-order with drag & drop, the order will update after saving.', 'cizarua' ) . '</div>';
+        echo '<div class="list-item-description">' . esc_html__( 'You can re-order with drag & drop, the order will update after saving.', 'rukhsar' ) . '</div>';
       
       echo '</div>';
 
@@ -2279,87 +2279,87 @@ if ( ! function_exists( 'ot_type_social_links' ) ) {
       
       $field_value = apply_filters( 'ot_type_social_links_defaults', array(
         array(
-          'name'    => esc_html__( 'Facebook', 'cizarua' ),
+          'name'    => esc_html__( 'Facebook', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Twitter', 'cizarua' ),
+          'name'    => esc_html__( 'Twitter', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Google+', 'cizarua' ),
+          'name'    => esc_html__( 'Google+', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'LinkedIn', 'cizarua' ),
+          'name'    => esc_html__( 'LinkedIn', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Pinterest', 'cizarua' ),
+          'name'    => esc_html__( 'Pinterest', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Youtube', 'cizarua' ),
+          'name'    => esc_html__( 'Youtube', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Dribbble', 'cizarua' ),
+          'name'    => esc_html__( 'Dribbble', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Github', 'cizarua' ),
+          'name'    => esc_html__( 'Github', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Forrst', 'cizarua' ),
+          'name'    => esc_html__( 'Forrst', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Digg', 'cizarua' ),
+          'name'    => esc_html__( 'Digg', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Delicious', 'cizarua' ),
+          'name'    => esc_html__( 'Delicious', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Tumblr', 'cizarua' ),
+          'name'    => esc_html__( 'Tumblr', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Skype', 'cizarua' ),
+          'name'    => esc_html__( 'Skype', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'SoundCloud', 'cizarua' ),
+          'name'    => esc_html__( 'SoundCloud', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Vimeo', 'cizarua' ),
+          'name'    => esc_html__( 'Vimeo', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'Flickr', 'cizarua' ),
+          'name'    => esc_html__( 'Flickr', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         ),
         array(
-          'name'    => esc_html__( 'VK.com', 'cizarua' ),
+          'name'    => esc_html__( 'VK.com', 'rukhsar' ),
           'title'   => '',
           'href'    => ''
         )
@@ -2408,10 +2408,10 @@ if ( ! function_exists( 'ot_type_social_links' ) ) {
         echo '</ul>';
         
         /* button */
-        echo '<a href="javascript:void(0);" class="option-tree-social-links-add option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add New', 'cizarua' ) . '">' . esc_html__( 'Add New', 'cizarua' ) . '</a>';
+        echo '<a href="javascript:void(0);" class="option-tree-social-links-add option-tree-ui-button button button-primary right hug-right" title="' . esc_html__( 'Add New', 'rukhsar' ) . '">' . esc_html__( 'Add New', 'rukhsar' ) . '</a>';
         
         /* description */
-        echo '<div class="list-item-description">' . apply_filters( 'ot_social_links_description', esc_html__( 'You can re-order with drag & drop, the order will update after saving.', 'cizarua' ), $field_id ) . '</div>';
+        echo '<div class="list-item-description">' . apply_filters( 'ot_social_links_description', esc_html__( 'You can re-order with drag & drop, the order will update after saving.', 'rukhsar' ), $field_id ) . '</div>';
       
       echo '</div>';
 
@@ -2465,7 +2465,7 @@ if ( ! function_exists( 'ot_type_spacing' ) ) {
 
           $top = isset( $field_value['top'] ) ? esc_attr( $field_value['top'] ) : '';
 
-          echo '<div class="ot-option-group"><span class="ot-icon-arrow-up ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[top]" id="' . esc_attr( $field_id ) . '-top" value="' . $top . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'top', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group"><span class="ot-icon-arrow-up ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[top]" id="' . esc_attr( $field_id ) . '-top" value="' . $top . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'top', 'rukhsar' ) . '" /></div>';
 
         }
 
@@ -2474,7 +2474,7 @@ if ( ! function_exists( 'ot_type_spacing' ) ) {
 
           $right = isset( $field_value['right'] ) ? esc_attr( $field_value['right'] ) : '';
 
-          echo '<div class="ot-option-group"><span class="ot-icon-arrow-right ot-option-group--icon"></span></span><input type="text" name="' . esc_attr( $field_name ) . '[right]" id="' . esc_attr( $field_id ) . '-right" value="' . $right . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'right', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group"><span class="ot-icon-arrow-right ot-option-group--icon"></span></span><input type="text" name="' . esc_attr( $field_name ) . '[right]" id="' . esc_attr( $field_id ) . '-right" value="' . $right . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'right', 'rukhsar' ) . '" /></div>';
 
         }
 
@@ -2483,7 +2483,7 @@ if ( ! function_exists( 'ot_type_spacing' ) ) {
 
           $bottom = isset( $field_value['bottom'] ) ? esc_attr( $field_value['bottom'] ) : '';
 
-          echo '<div class="ot-option-group"><span class="ot-icon-arrow-down ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[bottom]" id="' . esc_attr( $field_id ) . '-bottom" value="' . $bottom . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'bottom', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group"><span class="ot-icon-arrow-down ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[bottom]" id="' . esc_attr( $field_id ) . '-bottom" value="' . $bottom . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'bottom', 'rukhsar' ) . '" /></div>';
 
         }
 
@@ -2492,7 +2492,7 @@ if ( ! function_exists( 'ot_type_spacing' ) ) {
 
           $left = isset( $field_value['left'] ) ? esc_attr( $field_value['left'] ) : '';
 
-          echo '<div class="ot-option-group"><span class="ot-icon-arrow-left ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[left]" id="' . esc_attr( $field_id ) . '-left" value="' . $left . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'left', 'cizarua' ) . '" /></div>';
+          echo '<div class="ot-option-group"><span class="ot-icon-arrow-left ot-option-group--icon"></span><input type="text" name="' . esc_attr( $field_name ) . '[left]" id="' . esc_attr( $field_id ) . '-left" value="' . $left . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'left', 'rukhsar' ) . '" /></div>';
 
         }
 
@@ -2503,7 +2503,7 @@ if ( ! function_exists( 'ot_type_spacing' ) ) {
         
           echo '<select name="' . esc_attr( $field_name ) . '[unit]" id="' . esc_attr( $field_id ) . '-unit" class="option-tree-ui-select ' . esc_attr( $field_class ) . '">';
   
-            echo '<option value="">' . esc_html__( 'unit', 'cizarua' ) . '</option>';
+            echo '<option value="">' . esc_html__( 'unit', 'rukhsar' ) . '</option>';
   
             foreach ( ot_recognized_spacing_unit_types( $field_id ) as $unit ) {
               echo '<option value="' . esc_attr( $unit ) . '"' . ( isset( $field_value['unit'] ) ? selected( $field_value['unit'], $unit, false ) : '' ) . '>' . esc_attr( $unit ) . '</option>';
@@ -2594,7 +2594,7 @@ if ( ! function_exists( 'ot_type_tag_checkbox' ) ) {
             echo '</p>';
           } 
         } else {
-          echo '<p>' . esc_html__( 'No Tags Found', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'No Tags Found', 'rukhsar' ) . '</p>';
         }
         
       echo '</div>';
@@ -2643,12 +2643,12 @@ if ( ! function_exists( 'ot_type_tag_select' ) ) {
         
         /* has tags */
         if ( $tags ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose One', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose One', 'rukhsar' ) . ' --</option>';
           foreach( $tags as $tag ) {
             echo '<option value="' . esc_attr( $tag->term_id ) . '"' . selected( $field_value, $tag->term_id, false ) . '>' . esc_attr( $tag->name ) . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Tags Found', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Tags Found', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -2706,7 +2706,7 @@ if ( ! function_exists( 'ot_type_taxonomy_checkbox' ) ) {
             echo '</p>';
           } 
         } else {
-          echo '<p>' . esc_html__( 'No Taxonomies Found', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'No Taxonomies Found', 'rukhsar' ) . '</p>';
         }
         
       echo '</div>';
@@ -2758,12 +2758,12 @@ if ( ! function_exists( 'ot_type_taxonomy_select' ) ) {
         
         /* has tags */
         if ( $taxonomies ) {
-          echo '<option value="">-- ' . esc_html__( 'Choose One', 'cizarua' ) . ' --</option>';
+          echo '<option value="">-- ' . esc_html__( 'Choose One', 'rukhsar' ) . ' --</option>';
           foreach( $taxonomies as $taxonomy ) {
             echo '<option value="' . esc_attr( $taxonomy->term_id ) . '"' . selected( $field_value, $taxonomy->term_id, false ) . '>' . esc_attr( $taxonomy->name ) . '</option>';
           }
         } else {
-          echo '<option value="">' . esc_html__( 'No Taxonomies Found', 'cizarua' ) . '</option>';
+          echo '<option value="">' . esc_html__( 'No Taxonomies Found', 'rukhsar' ) . '</option>';
         }
         
         echo '</select>';
@@ -3199,7 +3199,7 @@ if ( ! function_exists( 'ot_type_upload' ) ) {
           echo '<input type="text" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $field_value ) . '" class="widefat option-tree-ui-upload-input ' . esc_attr( $field_class ) . '" />';
           
           /* add media button */
-          echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . $post_id . '" title="' . esc_html__( 'Add Media', 'cizarua' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'cizarua' ) . '</a>';
+          echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . $post_id . '" title="' . esc_html__( 'Add Media', 'rukhsar' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'rukhsar' ) . '</a>';
         
         echo '</div>';
         
@@ -3215,7 +3215,7 @@ if ( ! function_exists( 'ot_type_upload' ) ) {
             if ( preg_match( '/\.(?:jpe?g|png|gif|ico)$/i', $field_value ) )
               echo '<div class="option-tree-ui-image-wrap"><img src="' . esc_url( $field_value ) . '" alt="" /></div>';
             
-            echo '<a href="javascript:(void);" class="option-tree-ui-remove-media option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Media', 'cizarua' ) . '"><span class="icon ot-icon-minus-circle"></span>' . esc_html__( 'Remove Media', 'cizarua' ) . '</a>';
+            echo '<a href="javascript:(void);" class="option-tree-ui-remove-media option-tree-ui-button button button-secondary light" title="' . esc_html__( 'Remove Media', 'rukhsar' ) . '"><span class="icon ot-icon-minus-circle"></span>' . esc_html__( 'Remove Media', 'rukhsar' ) . '</a>';
             
           echo '</div>';
           

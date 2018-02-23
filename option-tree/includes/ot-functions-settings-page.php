@@ -32,13 +32,13 @@ if ( ! function_exists( 'ot_type_theme_options_ui' ) ) {
         /* description */
         echo '<div class="description">';
           
-          echo '<h4>'. esc_html__( 'Warning!', 'cizarua' ) . '</h4>';
-          echo '<p class="warning">' . sprintf( esc_html__( 'Go to the %s page if you want to save data, this page is for adding settings.', 'cizarua' ), '<a href="' . get_admin_url( $blog_id, apply_filters( 'ot_theme_options_parent_slug', 'themes.php' ) . '?page=' . apply_filters( 'ot_theme_options_menu_slug', 'ot-theme-options' ) ) . '"><code>Appearance->Theme Options</code></a>' ) . '</p>';
-          echo '<p class="warning">' . sprintf( esc_html__( 'If you\'re unsure or not completely positive that you should be editing these settings, you should read the %s first.', 'cizarua' ), '<a href="' . get_admin_url( $blog_id, 'admin.php?page=ot-documentation' ) . '"><code>OptionTree->Documentation</code></a>' ) . '</p>';
-          echo '<h4>'. esc_html__( 'Things could break or be improperly displayed to the end-user if you do one of the following:', 'cizarua' ) . '</h4>';
-          echo '<p class="warning">' . esc_html__( 'Give two sections the same ID, give two settings the same ID, give two contextual help content areas the same ID, don\'t create any settings, or have a section at the end of the settings list.', 'cizarua' ) . '</p>';
-          echo '<p>' . esc_html__( 'You can create as many settings as your project requires and use them how you see fit. When you add a setting here, it will be available on the Theme Options page for use in your theme. To separate your settings into sections, click the "Add Section" button, fill in the input fields, and a new navigation menu item will be created.', 'cizarua' ) . '</p>';
-          echo '<p>' . esc_html__( 'All of the settings can be sorted and rearranged to your liking with Drag & Drop. Don\'t worry about the order in which you create your settings, you can always reorder them.', 'cizarua' ) . '</p>';
+          echo '<h4>'. esc_html__( 'Warning!', 'rukhsar' ) . '</h4>';
+          echo '<p class="warning">' . sprintf( esc_html__( 'Go to the %s page if you want to save data, this page is for adding settings.', 'rukhsar' ), '<a href="' . get_admin_url( $blog_id, apply_filters( 'ot_theme_options_parent_slug', 'themes.php' ) . '?page=' . apply_filters( 'ot_theme_options_menu_slug', 'ot-theme-options' ) ) . '"><code>Appearance->Theme Options</code></a>' ) . '</p>';
+          echo '<p class="warning">' . sprintf( esc_html__( 'If you\'re unsure or not completely positive that you should be editing these settings, you should read the %s first.', 'rukhsar' ), '<a href="' . get_admin_url( $blog_id, 'admin.php?page=ot-documentation' ) . '"><code>OptionTree->Documentation</code></a>' ) . '</p>';
+          echo '<h4>'. esc_html__( 'Things could break or be improperly displayed to the end-user if you do one of the following:', 'rukhsar' ) . '</h4>';
+          echo '<p class="warning">' . esc_html__( 'Give two sections the same ID, give two settings the same ID, give two contextual help content areas the same ID, don\'t create any settings, or have a section at the end of the settings list.', 'rukhsar' ) . '</p>';
+          echo '<p>' . esc_html__( 'You can create as many settings as your project requires and use them how you see fit. When you add a setting here, it will be available on the Theme Options page for use in your theme. To separate your settings into sections, click the "Add Section" button, fill in the input fields, and a new navigation menu item will be created.', 'rukhsar' ) . '</p>';
+          echo '<p>' . esc_html__( 'All of the settings can be sorted and rearranged to your liking with Drag & Drop. Don\'t worry about the order in which you create your settings, you can always reorder them.', 'rukhsar' ) . '</p>';
           
         echo '</div>';
         
@@ -89,18 +89,18 @@ if ( ! function_exists( 'ot_type_theme_options_ui' ) ) {
           echo '</ul>';
           
           /* buttons */
-          echo '<a href="javascript:void(0);" class="option-tree-section-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Section', 'cizarua' ) . '</a>';
-          echo '<a href="javascript:void(0);" class="option-tree-setting-add option-tree-ui-button button">' . esc_html__( 'Add Setting', 'cizarua' ) . '</a>';
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Save Changes', 'cizarua' ) . '</button>';
+          echo '<a href="javascript:void(0);" class="option-tree-section-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Section', 'rukhsar' ) . '</a>';
+          echo '<a href="javascript:void(0);" class="option-tree-setting-add option-tree-ui-button button">' . esc_html__( 'Add Setting', 'rukhsar' ) . '</a>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Save Changes', 'rukhsar' ) . '</button>';
           
           /* sidebar textarea */
           echo '
           <div class="format-setting-label" id="contextual-help-label">
-            <h3 class="label">' . esc_html__( 'Contextual Help', 'cizarua' ) . '</h3>
+            <h3 class="label">' . esc_html__( 'Contextual Help', 'rukhsar' ) . '</h3>
           </div>
           <div class="format-settings" id="contextual-help-setting">
             <div class="format-setting type-textarea no-desc">
-              <div class="description"><strong>' . esc_html__( 'Contextual Help Sidebar', 'cizarua' ) . '</strong>: ' . esc_html__( 'If you decide to add contextual help to the Theme Option page, enter the optional "Sidebar" HTML here. This would be an extremely useful place to add links to your themes documentation or support forum. Only after you\'ve added some content below will this display to the user.', 'cizarua' ) . '</div>
+              <div class="description"><strong>' . esc_html__( 'Contextual Help Sidebar', 'rukhsar' ) . '</strong>: ' . esc_html__( 'If you decide to add contextual help to the Theme Option page, enter the optional "Sidebar" HTML here. This would be an extremely useful place to add links to your themes documentation or support forum. Only after you\'ve added some content below will this display to the user.', 'rukhsar' ) . '</div>
               <div class="format-setting-inner">
                 <textarea class="textarea" rows="10" cols="40" name="' . ot_settings_id(). '[contextual_help][sidebar]">' . ( isset( $settings['contextual_help']['sidebar'] ) ? esc_html( $settings['contextual_help']['sidebar'] ) : '' ) . '</textarea>
               </div>
@@ -129,8 +129,8 @@ if ( ! function_exists( 'ot_type_theme_options_ui' ) ) {
           
           echo '</ul>';
 
-          echo '<a href="javascript:void(0);" class="option-tree-help-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Contextual Help Content', 'cizarua' ) . '</a>';
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Save Changes', 'cizarua' ) . '</button>';
+          echo '<a href="javascript:void(0);" class="option-tree-help-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Contextual Help Content', 'rukhsar' ) . '</a>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Save Changes', 'rukhsar' ) . '</button>';
 
         echo '</div>';
         
@@ -165,12 +165,12 @@ if ( ! function_exists( 'ot_type_import_xml' ) ) {
         /* description */
         echo '<div class="description">';
           
-          echo '<p class="deprecated">' . esc_html__( 'This import method has been deprecated. That means it has been replaced by a new method and is no longer supported, and may be removed from future versions. All themes that use this import method should be converted to use its replacement below.', 'cizarua' ) . '</p>';
+          echo '<p class="deprecated">' . esc_html__( 'This import method has been deprecated. That means it has been replaced by a new method and is no longer supported, and may be removed from future versions. All themes that use this import method should be converted to use its replacement below.', 'rukhsar' ) . '</p>';
           
-          echo '<p>' . sprintf( esc_html__( 'If you were given a Theme Options XML file with a premium or free theme, locate it on your hard drive and upload that file by clicking the upload button. A popup window will appear, upload the XML file and click "%s". The file URL should be in the upload input, if it is click "Import XML".', 'cizarua' ), apply_filters( 'ot_upload_text', esc_html__( 'Send to OptionTree', 'cizarua' ) ) ) . '</p>';
+          echo '<p>' . sprintf( esc_html__( 'If you were given a Theme Options XML file with a premium or free theme, locate it on your hard drive and upload that file by clicking the upload button. A popup window will appear, upload the XML file and click "%s". The file URL should be in the upload input, if it is click "Import XML".', 'rukhsar' ), apply_filters( 'ot_upload_text', esc_html__( 'Send to OptionTree', 'rukhsar' ) ) ) . '</p>';
           
           /* button */
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import XML', 'cizarua' ) . '</button>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import XML', 'rukhsar' ) . '</button>';
           
         echo '</div>';
         
@@ -186,7 +186,7 @@ if ( ! function_exists( 'ot_type_import_xml' ) ) {
             $post_id = ( $id = ot_get_media_post_ID() ) ? (int) $id : 0;
           
             /* add xml button */
-            echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . $post_id . '" title="' . esc_html__( 'Add XML', 'cizarua' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add XML', 'cizarua' ) . '</a>';
+            echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . $post_id . '" title="' . esc_html__( 'Add XML', 'rukhsar' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add XML', 'rukhsar' ) . '</a>';
           
           echo '</div>';
           
@@ -223,10 +223,10 @@ if ( ! function_exists( 'ot_type_import_settings' ) ) {
         /* description */
         echo '<div class="description">';
           
-          echo '<p>' . esc_html__( 'To import your Settings copy and paste what appears to be a random string of alpha numeric characters into this textarea and press the "Import Settings" button.', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'To import your Settings copy and paste what appears to be a random string of alpha numeric characters into this textarea and press the "Import Settings" button.', 'rukhsar' ) . '</p>';
           
           /* button */
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import Settings', 'cizarua' ) . '</button>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import Settings', 'rukhsar' ) . '</button>';
           
         echo '</div>';
         
@@ -268,12 +268,12 @@ if ( ! function_exists( 'ot_type_import_data' ) ) {
         /* description */
         echo '<div class="description">';
           
-          if ( OT_SHOW_SETTINGS_IMPORT ) echo '<p>' . esc_html__( 'Only after you\'ve imported the Settings should you try and update your Theme Options.', 'cizarua' ) . '</p>';
+          if ( OT_SHOW_SETTINGS_IMPORT ) echo '<p>' . esc_html__( 'Only after you\'ve imported the Settings should you try and update your Theme Options.', 'rukhsar' ) . '</p>';
           
-          echo '<p>' . esc_html__( 'To import your Theme Options copy and paste what appears to be a random string of alpha numeric characters into this textarea and press the "Import Theme Options" button.', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'To import your Theme Options copy and paste what appears to be a random string of alpha numeric characters into this textarea and press the "Import Theme Options" button.', 'rukhsar' ) . '</p>';
           
           /* button */
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import Theme Options', 'cizarua' ) . '</button>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import Theme Options', 'rukhsar' ) . '</button>';
           
         echo '</div>';
         
@@ -315,12 +315,12 @@ if ( ! function_exists( 'ot_type_import_layouts' ) ) {
         /* description */
         echo '<div class="description">';
           
-          if ( OT_SHOW_SETTINGS_IMPORT ) echo '<p>' . esc_html__( 'Only after you\'ve imported the Settings should you try and update your Layouts.', 'cizarua' ) . '</p>';
+          if ( OT_SHOW_SETTINGS_IMPORT ) echo '<p>' . esc_html__( 'Only after you\'ve imported the Settings should you try and update your Layouts.', 'rukhsar' ) . '</p>';
           
-          echo '<p>' . esc_html__( 'To import your Layouts copy and paste what appears to be a random string of alpha numeric characters into this textarea and press the "Import Layouts" button. Keep in mind that when you import your layouts, the active layout\'s saved data will write over the current data set for your Theme Options.', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'To import your Layouts copy and paste what appears to be a random string of alpha numeric characters into this textarea and press the "Import Layouts" button. Keep in mind that when you import your layouts, the active layout\'s saved data will write over the current data set for your Theme Options.', 'rukhsar' ) . '</p>';
           
           /* button */
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import Layouts', 'cizarua' ) . '</button>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Import Layouts', 'rukhsar' ) . '</button>';
           
         echo '</div>';
         
@@ -363,7 +363,7 @@ if ( ! function_exists( 'ot_type_export_settings_file' ) ) {
         /* description */
         echo '<div class="description">';
           
-          echo '<p>' . sprintf( esc_html__( 'Export your Settings into a fully functional %s file. If you want to add your own custom %s text domain to the file, enter it into the text field before exporting. For more information on how to use this file read the documentation on %s. Remember, you should always check the file for errors before including it in your theme.', 'cizarua' ), '<code>theme-options.php</code>', '<a href="http://codex.wordpress.org/I18n_for_WordPress_Developers" target="_blank">I18n</a>', '<a href="' . get_admin_url( $blog_id, 'admin.php?page=ot-documentation#section_theme_mode' ) . '">' . esc_html__( 'Theme Mode', 'cizarua' ) . '</a>' ) . '</p>';
+          echo '<p>' . sprintf( esc_html__( 'Export your Settings into a fully functional %s file. If you want to add your own custom %s text domain to the file, enter it into the text field before exporting. For more information on how to use this file read the documentation on %s. Remember, you should always check the file for errors before including it in your theme.', 'rukhsar' ), '<code>theme-options.php</code>', '<a href="http://codex.wordpress.org/I18n_for_WordPress_Developers" target="_blank">I18n</a>', '<a href="' . get_admin_url( $blog_id, 'admin.php?page=ot-documentation#section_theme_mode' ) . '">' . esc_html__( 'Theme Mode', 'rukhsar' ) . '</a>' ) . '</p>';
           
         echo '</div>';
           
@@ -372,7 +372,7 @@ if ( ! function_exists( 'ot_type_export_settings_file' ) ) {
           echo '<input type="text" name="domain" value="" class="widefat option-tree-ui-input" placeholder="text-domain" autocomplete="off" />';
           
           /* button */
-          echo '<button class="option-tree-ui-button button button-primary hug-left">' . esc_html__( 'Export Settings File', 'cizarua' ) . '</button>';
+          echo '<button class="option-tree-ui-button button button-primary hug-left">' . esc_html__( 'Export Settings File', 'rukhsar' ) . '</button>';
           
         echo '</div>';
         
@@ -402,7 +402,7 @@ if ( ! function_exists( 'ot_type_export_settings' ) ) {
       /* description */
       echo '<div class="description">';
         
-        echo '<p>' . esc_html__( 'Export your Settings by highlighting this text and doing a copy/paste into a blank .txt file. Then save the file for importing into another install of WordPress later. Alternatively, you could just paste it into the <code>OptionTree->Settings->Import</code> <strong>Settings</strong> textarea on another web site.', 'cizarua' ) . '</p>';
+        echo '<p>' . esc_html__( 'Export your Settings by highlighting this text and doing a copy/paste into a blank .txt file. Then save the file for importing into another install of WordPress later. Alternatively, you could just paste it into the <code>OptionTree->Settings->Import</code> <strong>Settings</strong> textarea on another web site.', 'rukhsar' ) . '</p>';
         
       echo '</div>';
         
@@ -438,7 +438,7 @@ if ( ! function_exists( 'ot_type_export_data' ) ) {
       /* description */
       echo '<div class="description">';
         
-        echo '<p>' . esc_html__( 'Export your Theme Options data by highlighting this text and doing a copy/paste into a blank .txt file. Then save the file for importing into another install of WordPress later. Alternatively, you could just paste it into the <code>OptionTree->Settings->Import</code> <strong>Theme Options</strong> textarea on another web site.', 'cizarua' ) . '</p>';
+        echo '<p>' . esc_html__( 'Export your Theme Options data by highlighting this text and doing a copy/paste into a blank .txt file. Then save the file for importing into another install of WordPress later. Alternatively, you could just paste it into the <code>OptionTree->Settings->Import</code> <strong>Theme Options</strong> textarea on another web site.', 'rukhsar' ) . '</p>';
         
       echo '</div>';
       
@@ -474,7 +474,7 @@ if ( ! function_exists( 'ot_type_export_layouts' ) ) {
       /* description */
       echo '<div class="description">';
         
-        echo '<p>' . esc_html__( 'Export your Layouts by highlighting this text and doing a copy/paste into a blank .txt file. Then save the file for importing into another install of WordPress later. Alternatively, you could just paste it into the <code>OptionTree->Settings->Import</code> <strong>Layouts</strong> textarea on another web site.', 'cizarua' ) . '</p>';
+        echo '<p>' . esc_html__( 'Export your Layouts by highlighting this text and doing a copy/paste into a blank .txt file. Then save the file for importing into another install of WordPress later. Alternatively, you could just paste it into the <code>OptionTree->Settings->Import</code> <strong>Layouts</strong> textarea on another web site.', 'rukhsar' ) . '</p>';
         
         
       echo '</div>';
@@ -516,10 +516,10 @@ if ( ! function_exists( 'ot_type_modify_layouts' ) ) {
         /* description */
         echo '<div class="description">';
           
-          echo '<p>' . esc_html__( 'To add a new layout enter a unique lower case alphanumeric string (dashes allowed) in the text field and click "Save Layouts".', 'cizarua' ) . '</p>';
-          echo '<p>' . esc_html__( 'As well, you can activate, remove, and drag & drop the order; all situations require you to click "Save Layouts" for the changes to be applied.', 'cizarua' ) . '</p>';
-          echo '<p>' . esc_html__( 'When you create a new layout it will become active and any changes made to the Theme Options will be applied to it. If you switch back to a different layout immediately after creating a new layout that new layout will have a snapshot of the current Theme Options data attached to it.', 'cizarua' ) . '</p>';
-          if ( OT_SHOW_DOCS ) echo '<p>' . esc_html__( 'Visit <code>OptionTree->Documentation->Layouts Overview</code> to see a more in-depth description of what layouts are and how to use them.', 'cizarua' ) . '</p>';
+          echo '<p>' . esc_html__( 'To add a new layout enter a unique lower case alphanumeric string (dashes allowed) in the text field and click "Save Layouts".', 'rukhsar' ) . '</p>';
+          echo '<p>' . esc_html__( 'As well, you can activate, remove, and drag & drop the order; all situations require you to click "Save Layouts" for the changes to be applied.', 'rukhsar' ) . '</p>';
+          echo '<p>' . esc_html__( 'When you create a new layout it will become active and any changes made to the Theme Options will be applied to it. If you switch back to a different layout immediately after creating a new layout that new layout will have a snapshot of the current Theme Options data attached to it.', 'rukhsar' ) . '</p>';
+          if ( OT_SHOW_DOCS ) echo '<p>' . esc_html__( 'Visit <code>OptionTree->Documentation->Layouts Overview</code> to see a more in-depth description of what layouts are and how to use them.', 'rukhsar' ) . '</p>';
           
         echo '</div>';
         
@@ -556,7 +556,7 @@ if ( ! function_exists( 'ot_type_modify_layouts' ) ) {
           
           echo '</ul>';
             
-          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Save Layouts', 'cizarua' ) . '</button>';
+          echo '<button class="option-tree-ui-button button button-primary right hug-right">' . esc_html__( 'Save Layouts', 'rukhsar' ) . '</button>';
             
         echo '</div>';
         

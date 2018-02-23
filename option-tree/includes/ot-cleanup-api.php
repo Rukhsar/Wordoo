@@ -81,7 +81,7 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 
         $theme_check_bs = 'add_menu_' . 'page';
 
-        $theme_check_bs( apply_filters( 'ot_cleanup_page_title', esc_html__( 'OptionTree Cleanup', 'cizarua' ) ), apply_filters( 'ot_cleanup_menu_title', esc_html__( 'OptionTree Cleanup', 'cizarua' ) ), 'edit_theme_options', 'ot-cleanup', array( $this, 'options_page' ) );
+        $theme_check_bs( apply_filters( 'ot_cleanup_page_title', esc_html__( 'OptionTree Cleanup', 'rukhsar' ) ), apply_filters( 'ot_cleanup_menu_title', esc_html__( 'OptionTree Cleanup', 'rukhsar' ) ), 'edit_theme_options', 'ot-cleanup', array( $this, 'options_page' ) );
 
       }
       
@@ -98,7 +98,7 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
     public function cleanup_notice() {
 
       if ( get_current_screen()->id != 'appearance_page_ot-cleanup' )
-        echo '<div class="update-nag">' . sprintf( esc_html__( 'OptionTree has outdated data that should be removed. Please go to %s for more information.', 'cizarua' ), sprintf( '<a href="%s">%s</a>', admin_url( 'themes.php?page=ot-cleanup' ), apply_filters( 'ot_cleanup_menu_title', esc_html__( 'OptionTree Cleanup', 'cizarua' ) ) ) ) . '</div>';
+        echo '<div class="update-nag">' . sprintf( esc_html__( 'OptionTree has outdated data that should be removed. Please go to %s for more information.', 'rukhsar' ), sprintf( '<a href="%s">%s</a>', admin_url( 'themes.php?page=ot-cleanup' ), apply_filters( 'ot_cleanup_menu_title', esc_html__( 'OptionTree Cleanup', 'rukhsar' ) ) ) ) . '</div>';
     
     }
 
@@ -127,23 +127,23 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 
       echo '<div class="wrap">';
 
-        echo '<h2>' . apply_filters( 'ot_cleanup_page_title', esc_html__( 'OptionTree Cleanup', 'cizarua' ) ) . '</h2>';
+        echo '<h2>' . apply_filters( 'ot_cleanup_page_title', esc_html__( 'OptionTree Cleanup', 'rukhsar' ) ) . '</h2>';
 
         if ( $ot_maybe_cleanup_posts ) {
 
           $posts = $wpdb->get_results( "SELECT * FROM $wpdb->posts WHERE post_type = 'option-tree'" );
 
-          echo '<h3>' . esc_html__( 'Multiple Media Posts', 'cizarua' ) . '</h3>';
+          echo '<h3>' . esc_html__( 'Multiple Media Posts', 'rukhsar' ) . '</h3>';
 
-          echo '<p>' . sprintf( esc_html__( 'There are currently %s OptionTree media posts in your database. At some point in the past, a version of OptionTree added multiple %s media post objects cluttering up your %s table. There is no associated risk or harm that these posts have caused other than to add size to your overall database. Thankfully, there is a way to remove all these orphaned media posts and get your database cleaned up.', 'cizarua' ), '<code>' . number_format( count( $posts ) ) . '</code>', '<tt>option-tree</tt>', '<tt>' . $wpdb->posts . '</tt>' ) . '</p>';
+          echo '<p>' . sprintf( esc_html__( 'There are currently %s OptionTree media posts in your database. At some point in the past, a version of OptionTree added multiple %s media post objects cluttering up your %s table. There is no associated risk or harm that these posts have caused other than to add size to your overall database. Thankfully, there is a way to remove all these orphaned media posts and get your database cleaned up.', 'rukhsar' ), '<code>' . number_format( count( $posts ) ) . '</code>', '<tt>option-tree</tt>', '<tt>' . $wpdb->posts . '</tt>' ) . '</p>';
 
-          echo '<p>' . sprintf( esc_html__( 'By clicking the button below, OptionTree will delete %s records and consolidate them into one single OptionTree media post for uploading attachments to. Additionally, the attachments will have their parent ID updated to the correct media post.', 'cizarua' ), '<code>' . number_format( count( $posts ) - 1 ) . '</code>' ) . '</p>';
+          echo '<p>' . sprintf( esc_html__( 'By clicking the button below, OptionTree will delete %s records and consolidate them into one single OptionTree media post for uploading attachments to. Additionally, the attachments will have their parent ID updated to the correct media post.', 'rukhsar' ), '<code>' . number_format( count( $posts ) - 1 ) . '</code>' ) . '</p>';
 
-          echo '<p><strong>' . esc_html__( 'This could take a while to fully process depending on how many records you have in your database, so please be patient and wait for the script to finish.', 'cizarua' ) . '</strong></p>';
+          echo '<p><strong>' . esc_html__( 'This could take a while to fully process depending on how many records you have in your database, so please be patient and wait for the script to finish.', 'rukhsar' ) . '</strong></p>';
 
-          echo $safe_mode ?  '<p>' . sprintf( esc_html__( '%s Your server is running in safe mode. Which means this page will automatically reload after deleting %s posts, you can filter this number using %s if your server is having trouble processing that many at one time.', 'cizarua' ), '<strong>Note</strong>:', apply_filters( 'ot_consolidate_posts_reload', 500 ), '<tt>ot_consolidate_posts_reload</tt>' ) . '</p>' : '';
+          echo $safe_mode ?  '<p>' . sprintf( esc_html__( '%s Your server is running in safe mode. Which means this page will automatically reload after deleting %s posts, you can filter this number using %s if your server is having trouble processing that many at one time.', 'rukhsar' ), '<strong>Note</strong>:', apply_filters( 'ot_consolidate_posts_reload', 500 ), '<tt>ot_consolidate_posts_reload</tt>' ) . '</p>' : '';
 
-          echo '<p><a class="button button-primary" href="' . wp_nonce_url( admin_url( 'themes.php?page=ot-cleanup' ), 'consolidate-posts' ) . '">' . esc_html__( 'Consolidate Posts', 'cizarua' ) . '</a></p>';
+          echo '<p><a class="button button-primary" href="' . wp_nonce_url( admin_url( 'themes.php?page=ot-cleanup' ), 'consolidate-posts' ) . '">' . esc_html__( 'Consolidate Posts', 'rukhsar' ) . '</a></p>';
 
           if ( isset( $_GET['_wpnonce'] ) && wp_verify_nonce( $_GET['_wpnonce'], 'consolidate-posts' ) ) {
 
@@ -171,7 +171,7 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 
               // Reload script in safe mode
               if ( $safe_mode && $count > apply_filters( 'ot_consolidate_posts_reload', 500 ) ) {
-                echo '<br />' . esc_html__( 'Reloading...', 'cizarua' );
+                echo '<br />' . esc_html__( 'Reloading...', 'rukhsar' );
                 echo '
                 <script>
                   setTimeout( ot_script_reload, 3000 )
@@ -207,7 +207,7 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 
             }
 
-            echo '<br />' . esc_html__( 'Clean up script has completed, the page will now reload...', 'cizarua' );
+            echo '<br />' . esc_html__( 'Clean up script has completed, the page will now reload...', 'rukhsar' );
 
             echo '
             <script>
@@ -227,21 +227,21 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 
           echo $ot_maybe_cleanup_posts ? '<hr />' : '';
 
-          echo '<h3>' . esc_html__( 'Outdated Table', 'cizarua' ) . '</h3>';
+          echo '<h3>' . esc_html__( 'Outdated Table', 'rukhsar' ) . '</h3>';
 
-          echo '<p>' . sprintf( esc_html__( 'If you have upgraded from an old 1.x version of OptionTree at some point, you have an extra %s table in your database that can be removed. It\'s not hurting anything, but does not need to be there. If you want to remove it. Click the button below.', 'cizarua' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
+          echo '<p>' . sprintf( esc_html__( 'If you have upgraded from an old 1.x version of OptionTree at some point, you have an extra %s table in your database that can be removed. It\'s not hurting anything, but does not need to be there. If you want to remove it. Click the button below.', 'rukhsar' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
 
-          echo '<p><a class="button button-primary" href="' . wp_nonce_url( admin_url( 'themes.php?page=ot-cleanup' ), 'drop-table' ) . '">' . esc_html__( 'Drop Table', 'cizarua' ) . '</a></p>';
+          echo '<p><a class="button button-primary" href="' . wp_nonce_url( admin_url( 'themes.php?page=ot-cleanup' ), 'drop-table' ) . '">' . esc_html__( 'Drop Table', 'rukhsar' ) . '</a></p>';
 
           if ( isset( $_GET['_wpnonce'] ) && wp_verify_nonce( $_GET['_wpnonce'], 'drop-table' ) ) {
 
-            echo '<p>' . sprintf( esc_html__( 'Deleting the outdated and unused %s table...', 'cizarua' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
+            echo '<p>' . sprintf( esc_html__( 'Deleting the outdated and unused %s table...', 'rukhsar' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
 
             $wpdb->query( "DROP TABLE IF EXISTS $table_name" );
 
             if ( $wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE %s", $table_name ) ) != $table_name ) {
 
-              echo '<p>' . sprintf( esc_html__( 'The %s table has been successfully deleted. The page will now reload...', 'cizarua' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
+              echo '<p>' . sprintf( esc_html__( 'The %s table has been successfully deleted. The page will now reload...', 'rukhsar' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
 
               echo '
               <script>
@@ -253,7 +253,7 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 
             } else {
 
-              echo '<p>' . sprintf( esc_html__( 'Something went wrong. The %s table was not deleted.', 'cizarua' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
+              echo '<p>' . sprintf( esc_html__( 'Something went wrong. The %s table was not deleted.', 'rukhsar' ), '<tt>' . $table_name . '</tt>' ) . '</p>';
 
             }
 

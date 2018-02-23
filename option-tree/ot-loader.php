@@ -19,7 +19,7 @@ if ( class_exists( 'OT_Loader' ) && defined( 'OT_PLUGIN_MODE' ) && OT_PLUGIN_MOD
   
   function ot_conflict_notice() {
     
-    echo '<div class="error"><p>' . esc_html__( 'OptionTree is installed as a plugin and also embedded in your current theme. Please deactivate the plugin to load the theme dependent version of OptionTree, and remove this warning.', 'cizarua' ) . '</p></div>';
+    echo '<div class="error"><p>' . esc_html__( 'OptionTree is installed as a plugin and also embedded in your current theme. Please deactivate the plugin to load the theme dependent version of OptionTree, and remove this warning.', 'rukhsar' ) . '</p></div>';
     
   }
   
@@ -130,11 +130,11 @@ if ( ! class_exists( 'OT_Loader' ) ) {
     
       if ( OT_PLUGIN_MODE ) {
       
-        load_plugin_textdomain( 'cizarua', false, OT_LANG_DIR );
+        load_plugin_textdomain( 'rukhsar', false, OT_LANG_DIR );
         
       } else {
       
-        load_theme_textdomain( 'cizarua', OT_LANG_DIR );
+        load_theme_textdomain( 'rukhsar', OT_LANG_DIR );
         
       }
       
@@ -782,7 +782,7 @@ if ( ! class_exists( 'OT_Loader' ) ) {
         
         // Once is enough.
         remove_filter( 'gettext', array( $this, 'ot_change_image_button' ) );
-        return apply_filters( 'ot_upload_text', esc_html__( 'Send to OptionTree', 'cizarua' ) );
+        return apply_filters( 'ot_upload_text', esc_html__( 'Send to OptionTree', 'rukhsar' ) );
         
       }
       

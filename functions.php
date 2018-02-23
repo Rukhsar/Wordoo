@@ -23,8 +23,45 @@ function rukhsar_theme_setup() {
     // Theme default scripts and styles
     add_action('wp_enqueue_scripts', 'rukhsar_theme_scripts');
     add_action('wp_enqueue_scripts', 'rukhsar_theme_styles');
+    add_action('wp_enqueue_scripts','rukhsar_homepage_script' );
     // Register sidebar
     add_action( 'widgets_init', 'rukhsar_sidebar' );
+
+    //custom comment styles
+    add_filter('comment_form_default_fields','rukhsar_modify_comment_form_fields');
+    add_action( 'wp_enqueue_scripts', 'rukhsar_color_scheme' );
+
+}
+
+//custom comment form
+function rukhsar_modify_comment_form_fields($fields){
+    $req = get_option('require_name_email');
+    $commenter = wp_get_current_commenter();
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+
+    $fields['author'] = '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'rukhsar' ) . '</label> ' .
+
+        ( $req ? '' : '' ) .
+
+        '<input id="author" name="author" type="text" placeholder="'. esc_html__('Your Name ...','rukhsar').'" value="' .
+
+        esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
+
+    $fields['email'] = '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'rukhsar' ) . '</label> ' .
+
+        ( $req ? '' : '' ) .
+
+        '<input id="email" name="email" type="text" placeholder="'. esc_html__('Your Email ...','rukhsar') .'"  value="' .
+
+        esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
+
+    $fields['url'] = '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'rukhsar' ) . '</label>' .
+
+        '<input id="url" name="url" type="text" placeholder="'. esc_html__('Your Website ...','rukhsar').'" value="' .
+
+        esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
+
+    return $fields;
 }
 
 function rukhsar_register_menu() {
@@ -54,7 +91,10 @@ include ( get_template_directory().'/inc/theme-scripts.php');
 include ( get_template_directory().'/inc/plugin-install.php');
 include ( get_template_directory().'/inc/post-types/post-types.php');
 include ( get_template_directory().'/inc/post-meta.php');
-
+include( get_template_directory().'/inc/color-schemes.php');
+include( get_template_directory().'/inc/pagination.php');
+include( get_template_directory().'/inc/homepage-setting.php');
+include( get_template_directory().'/inc/comment-template.php');
 
 // Adding OptionTree into themes
 /**

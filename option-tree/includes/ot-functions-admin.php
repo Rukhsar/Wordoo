@@ -47,15 +47,15 @@ if ( ! function_exists( 'ot_register_theme_options_page' ) ) {
               array(
                 'id'              => 'ot_theme_options',
                 'parent_slug'     => apply_filters( 'ot_theme_options_parent_slug', 'themes.php' ),
-                'page_title'      => apply_filters( 'ot_theme_options_page_title', esc_html__( 'Theme Options', 'cizarua' ) ),
-                'menu_title'      => apply_filters( 'ot_theme_options_menu_title', esc_html__( 'Theme Options', 'cizarua' ) ),
+                'page_title'      => apply_filters( 'ot_theme_options_page_title', esc_html__( 'Theme Options', 'rukhsar' ) ),
+                'menu_title'      => apply_filters( 'ot_theme_options_menu_title', esc_html__( 'Theme Options', 'rukhsar' ) ),
                 'capability'      => $caps = apply_filters( 'ot_theme_options_capability', 'edit_theme_options' ),
                 'menu_slug'       => apply_filters( 'ot_theme_options_menu_slug', 'ot-theme-options' ),
                 'icon_url'        => apply_filters( 'ot_theme_options_icon_url', null ),
                 'position'        => apply_filters( 'ot_theme_options_position', null ),
-                'updated_message' => apply_filters( 'ot_theme_options_updated_message', esc_html__( 'Theme Options updated.', 'cizarua' ) ),
-                'reset_message'   => apply_filters( 'ot_theme_options_reset_message', esc_html__( 'Theme Options reset.', 'cizarua' ) ),
-                'button_text'     => apply_filters( 'ot_theme_options_button_text', esc_html__( 'Save Changes', 'cizarua' ) ),
+                'updated_message' => apply_filters( 'ot_theme_options_updated_message', esc_html__( 'Theme Options updated.', 'rukhsar' ) ),
+                'reset_message'   => apply_filters( 'ot_theme_options_reset_message', esc_html__( 'Theme Options reset.', 'rukhsar' ) ),
+                'button_text'     => apply_filters( 'ot_theme_options_button_text', esc_html__( 'Save Changes', 'rukhsar' ) ),
                 'contextual_help' => apply_filters( 'ot_theme_options_contextual_help', $contextual_help ),
                 'sections'        => apply_filters( 'ot_theme_options_sections', $sections ),
                 'settings'        => apply_filters( 'ot_theme_options_settings', $settings )
@@ -94,7 +94,7 @@ if ( ! function_exists( 'ot_register_settings_page' ) ) {
       
       function ot_has_custom_theme_options() {
     
-        echo '<div class="error"><p>' . esc_html__( 'The Theme Options UI Builder is being overridden by a custom file in your theme. Any changes you make via the UI Builder will not be saved.', 'cizarua' ) . '</p></div>';
+        echo '<div class="error"><p>' . esc_html__( 'The Theme Options UI Builder is being overridden by a custom file in your theme. Any changes you make via the UI Builder will not be saved.', 'rukhsar' ) . '</p></div>';
         
       }
       
@@ -106,8 +106,8 @@ if ( ! function_exists( 'ot_register_settings_page' ) ) {
     $ot_register_pages_array =  array( 
       array( 
         'id'              => 'ot',
-        'page_title'      => esc_html__( 'OptionTree', 'cizarua' ),
-        'menu_title'      => esc_html__( 'OptionTree', 'cizarua' ),
+        'page_title'      => esc_html__( 'OptionTree', 'rukhsar' ),
+        'menu_title'      => esc_html__( 'OptionTree', 'rukhsar' ),
         'capability'      => 'edit_theme_options',
         'menu_slug'       => 'ot-settings',
         'icon_url'        => null,
@@ -117,92 +117,92 @@ if ( ! function_exists( 'ot_register_settings_page' ) ) {
       array(
         'id'              => 'settings',
         'parent_slug'     => 'ot-settings',
-        'page_title'      => esc_html__( 'Settings', 'cizarua' ),
-        'menu_title'      => esc_html__( 'Settings', 'cizarua' ),
+        'page_title'      => esc_html__( 'Settings', 'rukhsar' ),
+        'menu_title'      => esc_html__( 'Settings', 'rukhsar' ),
         'capability'      => 'edit_theme_options',
         'menu_slug'       => 'ot-settings',
         'icon_url'        => null,
         'position'        => null,
-        'updated_message' => esc_html__( 'Theme Options updated.', 'cizarua' ),
-        'reset_message'   => esc_html__( 'Theme Options reset.', 'cizarua' ),
-        'button_text'     => esc_html__( 'Save Settings', 'cizarua' ),
+        'updated_message' => esc_html__( 'Theme Options updated.', 'rukhsar' ),
+        'reset_message'   => esc_html__( 'Theme Options reset.', 'rukhsar' ),
+        'button_text'     => esc_html__( 'Save Settings', 'rukhsar' ),
         'show_buttons'    => false,
         'sections'        => array(
           array(
             'id'          => 'create_setting',
-            'title'       => esc_html__( 'Theme Options UI', 'cizarua' )
+            'title'       => esc_html__( 'Theme Options UI', 'rukhsar' )
           ),
           array(
             'id'          => 'import',
-            'title'       => esc_html__( 'Import', 'cizarua' )
+            'title'       => esc_html__( 'Import', 'rukhsar' )
           ),
           array(
             'id'          => 'export',
-            'title'       => esc_html__( 'Export', 'cizarua' )
+            'title'       => esc_html__( 'Export', 'rukhsar' )
           ),
           array(
             'id'          => 'layouts',
-            'title'       => esc_html__( 'Layouts', 'cizarua' )
+            'title'       => esc_html__( 'Layouts', 'rukhsar' )
           )
         ),
         'settings'        => array(
           array(
             'id'          => 'theme_options_ui_text',
-            'label'       => esc_html__( 'Theme Options UI Builder', 'cizarua' ),
+            'label'       => esc_html__( 'Theme Options UI Builder', 'rukhsar' ),
             'type'        => 'theme_options_ui',
             'section'     => 'create_setting'
           ),
           array(
             'id'          => 'import_xml_text',
-            'label'       => esc_html__( 'Settings XML', 'cizarua' ),
+            'label'       => esc_html__( 'Settings XML', 'rukhsar' ),
             'type'        => 'import-xml',
             'section'     => 'import'
           ),
           array(
             'id'          => 'import_settings_text',
-            'label'       => esc_html__( 'Settings', 'cizarua' ),
+            'label'       => esc_html__( 'Settings', 'rukhsar' ),
             'type'        => 'import-settings',
             'section'     => 'import'
           ),
           array(
             'id'          => 'import_data_text',
-            'label'       => esc_html__( 'Theme Options', 'cizarua' ),
+            'label'       => esc_html__( 'Theme Options', 'rukhsar' ),
             'type'        => 'import-data',
             'section'     => 'import'
           ),
           array(
             'id'          => 'import_layouts_text',
-            'label'       => esc_html__( 'Layouts', 'cizarua' ),
+            'label'       => esc_html__( 'Layouts', 'rukhsar' ),
             'type'        => 'import-layouts',
             'section'     => 'import'
           ),
           array(
             'id'          => 'export_settings_file_text',
-            'label'       => esc_html__( 'Settings PHP File', 'cizarua' ),
+            'label'       => esc_html__( 'Settings PHP File', 'rukhsar' ),
             'type'        => 'export-settings-file',
             'section'     => 'export'
           ),
           array(
             'id'          => 'export_settings_text',
-            'label'       => esc_html__( 'Settings', 'cizarua' ),
+            'label'       => esc_html__( 'Settings', 'rukhsar' ),
             'type'        => 'export-settings',
             'section'     => 'export'
           ),
           array(
             'id'          => 'export_data_text',
-            'label'       => esc_html__( 'Theme Options', 'cizarua' ),
+            'label'       => esc_html__( 'Theme Options', 'rukhsar' ),
             'type'        => 'export-data',
             'section'     => 'export'
           ),
           array(
             'id'          => 'export_layout_text',
-            'label'       => esc_html__( 'Layouts', 'cizarua' ),
+            'label'       => esc_html__( 'Layouts', 'rukhsar' ),
             'type'        => 'export-layouts',
             'section'     => 'export'
           ),
           array(
             'id'          => 'modify_layouts_text',
-            'label'       => esc_html__( 'Layout Management', 'cizarua' ),
+            'label'       => esc_html__( 'Layout Management', 'rukhsar' ),
             'type'        => 'modify-layouts',
             'section'     => 'layouts'
           )
@@ -211,92 +211,92 @@ if ( ! function_exists( 'ot_register_settings_page' ) ) {
       array(
         'id'              => 'documentation',
         'parent_slug'     => 'ot-settings',
-        'page_title'      => esc_html__( 'Documentation', 'cizarua' ),
-        'menu_title'      => esc_html__( 'Documentation', 'cizarua' ),
+        'page_title'      => esc_html__( 'Documentation', 'rukhsar' ),
+        'menu_title'      => esc_html__( 'Documentation', 'rukhsar' ),
         'capability'      => 'edit_theme_options',
         'menu_slug'       => 'ot-documentation',
         'icon_url'        => null,
         'position'        => null,
-        'updated_message' => esc_html__( 'Theme Options updated.', 'cizarua' ),
-        'reset_message'   => esc_html__( 'Theme Options reset.', 'cizarua' ),
-        'button_text'     => esc_html__( 'Save Settings', 'cizarua' ),
+        'updated_message' => esc_html__( 'Theme Options updated.', 'rukhsar' ),
+        'reset_message'   => esc_html__( 'Theme Options reset.', 'rukhsar' ),
+        'button_text'     => esc_html__( 'Save Settings', 'rukhsar' ),
         'show_buttons'    => false,
         'sections'        => array(
           array(
             'id'          => 'creating_options',
-            'title'       => esc_html__( 'Creating Options', 'cizarua' )
+            'title'       => esc_html__( 'Creating Options', 'rukhsar' )
           ),
           array(
             'id'          => 'option_types',
-            'title'       => esc_html__( 'Option Types', 'cizarua' )
+            'title'       => esc_html__( 'Option Types', 'rukhsar' )
           ),
           array(
             'id'          => 'functions',
-            'title'       => esc_html__( 'Function References', 'cizarua' )
+            'title'       => esc_html__( 'Function References', 'rukhsar' )
           ),
           array(
             'id'          => 'theme_mode',
-            'title'       => esc_html__( 'Theme Mode', 'cizarua' )
+            'title'       => esc_html__( 'Theme Mode', 'rukhsar' )
           ),
           array(
             'id'          => 'meta_boxes',
-            'title'       => esc_html__( 'Meta Boxes', 'cizarua' )
+            'title'       => esc_html__( 'Meta Boxes', 'rukhsar' )
           ),
           array(
             'id'          => 'examples',
-            'title'       => esc_html__( 'Code Examples', 'cizarua' )
+            'title'       => esc_html__( 'Code Examples', 'rukhsar' )
           ),
           array(
             'id'          => 'layouts_overview',
-            'title'       => esc_html__( 'Layouts Overview', 'cizarua' )
+            'title'       => esc_html__( 'Layouts Overview', 'rukhsar' )
           )
         ),
         'settings'        => array(
           array(
             'id'          => 'creating_options_text',
-            'label'       => esc_html__( 'Overview of available Theme Option fields.', 'cizarua' ),
+            'label'       => esc_html__( 'Overview of available Theme Option fields.', 'rukhsar' ),
             'type'        => 'creating-options',
             'section'     => 'creating_options'
           ),
           array(
             'id'          => 'option_types_text',
-            'label'       => esc_html__( 'Option types in alphabetical order & hooks to filter them.', 'cizarua' ),
+            'label'       => esc_html__( 'Option types in alphabetical order & hooks to filter them.', 'rukhsar' ),
             'type'        => 'option-types',
             'section'     => 'option_types'
           ),
           array(
             'id'          => 'functions_ot_get_option',
-            'label'       => esc_html__( 'Function Reference:ot_get_option()', 'cizarua' ),
+            'label'       => esc_html__( 'Function Reference:ot_get_option()', 'rukhsar' ),
             'type'        => 'ot-get-option',
             'section'     => 'functions'
           ),
           array(
             'id'          => 'functions_get_option_tree',
-            'label'       => esc_html__( 'Function Reference:get_option_tree()', 'cizarua' ),
+            'label'       => esc_html__( 'Function Reference:get_option_tree()', 'rukhsar' ),
             'type'        => 'get-option-tree',
             'section'     => 'functions'
           ),
           array(
             'id'          => 'theme_mode_text',
-            'label'       => esc_html__( 'Theme Mode', 'cizarua' ),
+            'label'       => esc_html__( 'Theme Mode', 'rukhsar' ),
             'type'        => 'theme-mode',
             'section'     => 'theme_mode'
           ),
           array(
             'id'          => 'meta_boxes_text',
-            'label'       => esc_html__( 'Meta Boxes', 'cizarua' ),
+            'label'       => esc_html__( 'Meta Boxes', 'rukhsar' ),
             'type'        => 'meta-boxes',
             'section'     => 'meta_boxes'
           ),
           array(
             'id'          => 'example_text',
-            'label'       => esc_html__( 'Code examples for front-end development.', 'cizarua' ),
+            'label'       => esc_html__( 'Code examples for front-end development.', 'rukhsar' ),
             'type'        => 'examples',
             'section'     => 'examples'
           ),
           array(
             'id'          => 'layouts_overview_text',
-            'label'       => esc_html__( 'What\'s a layout anyhow?', 'cizarua' ),
+            'label'       => esc_html__( 'What\'s a layout anyhow?', 'rukhsar' ),
             'type'        => 'layouts-overview',
             'section'     => 'layouts_overview'
           )
@@ -499,7 +499,7 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
           
           $input[$key] = '0';
           
-          add_settings_error( 'option-tree', 'invalid_border_width', sprintf( esc_html__( 'The %s input field for %s only allows numeric values.', 'cizarua' ), '<code>width</code>', '<code>' . $field_id . '</code>' ), 'error' );
+          add_settings_error( 'option-tree', 'invalid_border_width', sprintf( esc_html__( 'The %s input field for %s only allows numeric values.', 'rukhsar' ), '<code>width</code>', '<code>' . $field_id . '</code>' ), 'error' );
           
         }
         
@@ -560,7 +560,7 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
         
         $input = '';
         
-        add_settings_error( 'option-tree', 'invalid_hex', sprintf( esc_html__( 'The %s Colorpicker only allows valid hexadecimal or rgba values.', 'cizarua' ), '<code>' . $field_id . '</code>' ), 'error' );
+        add_settings_error( 'option-tree', 'invalid_hex', sprintf( esc_html__( 'The %s Colorpicker only allows valid hexadecimal or rgba values.', 'rukhsar' ), '<code>' . $field_id . '</code>' ), 'error' );
       
       }
       
@@ -601,7 +601,7 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
           
           $input[$error] = '0';
           
-          add_settings_error( 'option-tree', 'invalid_dimension_' . $error, sprintf( esc_html__( 'The %s input field for %s only allows numeric values.', 'cizarua' ), '<code>' . $error . '</code>', '<code>' . $field_id . '</code>' ), 'error' );
+          add_settings_error( 'option-tree', 'invalid_dimension_' . $error, sprintf( esc_html__( 'The %s input field for %s only allows numeric values.', 'rukhsar' ), '<code>' . $error . '</code>', '<code>' . $field_id . '</code>' ), 'error' );
           
         }
         
@@ -670,7 +670,7 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
           
           $input[$error] = '0';
           
-          add_settings_error( 'option-tree', 'invalid_spacing_' . $error, sprintf( esc_html__( 'The %s input field for %s only allows numeric values.', 'cizarua' ), '<code>' . $error . '</code>', '<code>' . $field_id . '</code>' ), 'error' );
+          add_settings_error( 'option-tree', 'invalid_spacing_' . $error, sprintf( esc_html__( 'The %s input field for %s only allows numeric values.', 'rukhsar' ), '<code>' . $error . '</code>', '<code>' . $field_id . '</code>' ), 'error' );
           
         }
         
@@ -844,22 +844,22 @@ if ( ! function_exists( 'ot_admin_scripts' ) ) {
     $localized_array = array( 
       'ajax'                  => admin_url( 'admin-ajax.php' ),
       'nonce'                 => wp_create_nonce( 'option_tree' ),
-      'upload_text'           => apply_filters( 'ot_upload_text', esc_html__( 'Send to OptionTree', 'cizarua' ) ),
-      'remove_media_text'     => esc_html__( 'Remove Media', 'cizarua' ),
-      'reset_agree'           => esc_html__( 'Are you sure you want to reset back to the defaults?', 'cizarua' ),
-      'remove_no'             => esc_html__( 'You can\'t remove this! But you can edit the values.', 'cizarua' ),
-      'remove_agree'          => esc_html__( 'Are you sure you want to remove this?', 'cizarua' ),
-      'activate_layout_agree' => esc_html__( 'Are you sure you want to activate this layout?', 'cizarua' ),
-      'setting_limit'         => esc_html__( 'Sorry, you can\'t have settings three levels deep.', 'cizarua' ),
-      'delete'                => esc_html__( 'Delete Gallery', 'cizarua' ), 
-      'edit'                  => esc_html__( 'Edit Gallery', 'cizarua' ), 
-      'create'                => esc_html__( 'Create Gallery', 'cizarua' ), 
-      'confirm'               => esc_html__( 'Are you sure you want to delete this Gallery?', 'cizarua' ),
-      'date_current'          => esc_html__( 'Today', 'cizarua' ),
-      'date_time_current'     => esc_html__( 'Now', 'cizarua' ),
-      'date_close'            => esc_html__( 'Close', 'cizarua' ),
-      'replace'               => esc_html__( 'Featured Image', 'cizarua' ),
-      'with'                  => esc_html__( 'Image', 'cizarua' )
+      'upload_text'           => apply_filters( 'ot_upload_text', esc_html__( 'Send to OptionTree', 'rukhsar' ) ),
+      'remove_media_text'     => esc_html__( 'Remove Media', 'rukhsar' ),
+      'reset_agree'           => esc_html__( 'Are you sure you want to reset back to the defaults?', 'rukhsar' ),
+      'remove_no'             => esc_html__( 'You can\'t remove this! But you can edit the values.', 'rukhsar' ),
+      'remove_agree'          => esc_html__( 'Are you sure you want to remove this?', 'rukhsar' ),
+      'activate_layout_agree' => esc_html__( 'Are you sure you want to activate this layout?', 'rukhsar' ),
+      'setting_limit'         => esc_html__( 'Sorry, you can\'t have settings three levels deep.', 'rukhsar' ),
+      'delete'                => esc_html__( 'Delete Gallery', 'rukhsar' ),
+      'edit'                  => esc_html__( 'Edit Gallery', 'rukhsar' ),
+      'create'                => esc_html__( 'Create Gallery', 'rukhsar' ),
+      'confirm'               => esc_html__( 'Are you sure you want to delete this Gallery?', 'rukhsar' ),
+      'date_current'          => esc_html__( 'Today', 'rukhsar' ),
+      'date_time_current'     => esc_html__( 'Now', 'rukhsar' ),
+      'date_close'            => esc_html__( 'Close', 'rukhsar' ),
+      'replace'               => esc_html__( 'Featured Image', 'rukhsar' ),
+      'with'                  => esc_html__( 'Image', 'rukhsar' )
     );
     
     /* localized script attached to 'option_tree' */
@@ -927,7 +927,7 @@ if ( ! function_exists( 'ot_create_media_post' ) ) {
     
     $regsiter_post_type = 'register_' . 'post_type';
     $regsiter_post_type( 'option-tree', array(
-      'labels'              => array( 'name' => esc_html__( 'Option Tree', 'cizarua' ) ),
+      'labels'              => array( 'name' => esc_html__( 'Option Tree', 'rukhsar' ) ),
       'public'              => false,
       'show_ui'             => false,
       'capability_type'     => 'post',
@@ -1065,14 +1065,14 @@ if ( ! function_exists( 'ot_default_settings' ) ) {
           'sections' => array(
             array(
               'id'        => 'general',
-              'title'     => esc_html__( 'General', 'cizarua' )
+              'title'     => esc_html__( 'General', 'rukhsar' )
             )
           ),
           'settings' => array(
             array(
               'id'        => 'sample_text',
-              'label'     => esc_html__( 'Sample Text Field Label', 'cizarua' ),
-              'desc'      => esc_html__( 'Description for the sample text field.', 'cizarua' ),
+              'label'     => esc_html__( 'Sample Text Field Label', 'rukhsar' ),
+              'desc'      => esc_html__( 'Description for the sample text field.', 'rukhsar' ),
               'section'   => 'general',
               'type'      => 'text',
               'std'       => '',
@@ -2314,11 +2314,11 @@ if ( ! function_exists( 'ot_alert_message' ) ) {
     
       if ( $message == 'success' ) {
         
-        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Settings updated.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Settings updated.', 'rukhsar' ) . '</p></div>';
         
       } else if ( $message == 'failed' ) {
         
-        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Settings could not be saved.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Settings could not be saved.', 'rukhsar' ) . '</p></div>';
         
       }
       
@@ -2326,22 +2326,22 @@ if ( ! function_exists( 'ot_alert_message' ) ) {
       
       if ( $message == 'success' ) {
         
-        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Settings Imported.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Settings Imported.', 'rukhsar' ) . '</p></div>';
         
       } else if ( $message == 'failed' ) {
         
-        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Settings could not be imported.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Settings could not be imported.', 'rukhsar' ) . '</p></div>';
         
       }
     } else if ( $action == 'import-data' ) {
       
       if ( $message == 'success' ) {
         
-        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Data Imported.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Data Imported.', 'rukhsar' ) . '</p></div>';
         
       } else if ( $message == 'failed' ) {
         
-        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Data could not be imported.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Data could not be imported.', 'rukhsar' ) . '</p></div>';
         
       }
     
@@ -2349,11 +2349,11 @@ if ( ! function_exists( 'ot_alert_message' ) ) {
       
       if ( $message == 'success' ) {
         
-        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layouts Imported.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layouts Imported.', 'rukhsar' ) . '</p></div>';
         
       } else if ( $message == 'failed' ) {
         
-        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Layouts could not be imported.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Layouts could not be imported.', 'rukhsar' ) . '</p></div>';
         
       }
            
@@ -2361,21 +2361,21 @@ if ( ! function_exists( 'ot_alert_message' ) ) {
       
       if ( $message == 'success' ) {
         
-        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layouts Updated.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layouts Updated.', 'rukhsar' ) . '</p></div>';
         
       } else if ( $message == 'failed' ) {
         
-        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Layouts could not be updated.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="error fade below-h2"><p>' . esc_html__( 'Layouts could not be updated.', 'rukhsar' ) . '</p></div>';
         
       } else if ( $message == 'deleted' ) {
         
-        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layouts have been deleted.', 'cizarua' ) . '</p></div>';
+        return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layouts have been deleted.', 'rukhsar' ) . '</p></div>';
         
       }
     
     } else if ( $updated == 'layout' ) {  
        
-      return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layout activated.', 'cizarua' ) . '</p></div>';
+      return '<div id="message" class="updated fade below-h2"><p>' . esc_html__( 'Layout activated.', 'rukhsar' ) . '</p></div>';
         
     } else if ( $action == 'reset' ) {
       
@@ -2414,51 +2414,51 @@ if ( ! function_exists( 'ot_option_types_array' ) ) {
   function ot_option_types_array() {
   
     return apply_filters( 'ot_option_types_array', array( 
-      'background'                => esc_html__('Background', 'cizarua'),
-      'border'                    => esc_html__('Border', 'cizarua'),
-      'box-shadow'                => esc_html__('Box Shadow', 'cizarua'),
-      'category-checkbox'         => esc_html__('Category Checkbox', 'cizarua'),
-      'category-select'           => esc_html__('Category Select', 'cizarua'),
-      'checkbox'                  => esc_html__('Checkbox', 'cizarua'),
-      'colorpicker'               => esc_html__('Colorpicker', 'cizarua'),
-      'colorpicker-opacity'       => esc_html__('Colorpicker Opacity', 'cizarua'),
-      'css'                       => esc_html__('CSS', 'cizarua'),
-      'custom-post-type-checkbox' => esc_html__('Custom Post Type Checkbox', 'cizarua'),
-      'custom-post-type-select'   => esc_html__('Custom Post Type Select', 'cizarua'),
-      'date-picker'               => esc_html__('Date Picker', 'cizarua'),
-      'date-time-picker'          => esc_html__('Date Time Picker', 'cizarua'),
-      'dimension'                 => esc_html__('Dimension', 'cizarua'),
-      'gallery'                   => esc_html__('Gallery', 'cizarua'),
-      'google-fonts'              => esc_html__('Google Fonts', 'cizarua'),
-      'javascript'                => esc_html__('JavaScript', 'cizarua'),
-      'link-color'                => esc_html__('Link Color', 'cizarua'),
-      'list-item'                 => esc_html__('List Item', 'cizarua'),
-      'measurement'               => esc_html__('Measurement', 'cizarua'),
-      'numeric-slider'            => esc_html__('Numeric Slider', 'cizarua'),
-      'on-off'                    => esc_html__('On/Off', 'cizarua'),
-      'page-checkbox'             => esc_html__('Page Checkbox', 'cizarua'),
-      'page-select'               => esc_html__('Page Select', 'cizarua'),
-      'post-checkbox'             => esc_html__('Post Checkbox', 'cizarua'),
-      'post-select'               => esc_html__('Post Select', 'cizarua'),
-      'radio'                     => esc_html__('Radio', 'cizarua'),
-      'radio-image'               => esc_html__('Radio Image', 'cizarua'),
-      'select'                    => esc_html__('Select', 'cizarua'),
-      'sidebar-select'            => esc_html__('Sidebar Select', 'cizarua'),
-      'slider'                    => esc_html__('Slider', 'cizarua'),
-      'social-links'              => esc_html__('Social Links', 'cizarua'),
-      'spacing'                   => esc_html__('Spacing', 'cizarua'),
-      'tab'                       => esc_html__('Tab', 'cizarua'),
-      'tag-checkbox'              => esc_html__('Tag Checkbox', 'cizarua'),
-      'tag-select'                => esc_html__('Tag Select', 'cizarua'),
-      'taxonomy-checkbox'         => esc_html__('Taxonomy Checkbox', 'cizarua'),
-      'taxonomy-select'           => esc_html__('Taxonomy Select', 'cizarua'),
-      'text'                      => esc_html__('Text', 'cizarua'),
-      'textarea'                  => esc_html__('Textarea', 'cizarua'),
-      'textarea-simple'           => esc_html__('Textarea Simple', 'cizarua'),
-      'textblock'                 => esc_html__('Textblock', 'cizarua'),
-      'textblock-titled'          => esc_html__('Textblock Titled', 'cizarua'),
-      'typography'                => esc_html__('Typography', 'cizarua'),
-      'upload'                    => esc_html__('Upload', 'cizarua')
+      'background'                => esc_html__('Background', 'rukhsar'),
+      'border'                    => esc_html__('Border', 'rukhsar'),
+      'box-shadow'                => esc_html__('Box Shadow', 'rukhsar'),
+      'category-checkbox'         => esc_html__('Category Checkbox', 'rukhsar'),
+      'category-select'           => esc_html__('Category Select', 'rukhsar'),
+      'checkbox'                  => esc_html__('Checkbox', 'rukhsar'),
+      'colorpicker'               => esc_html__('Colorpicker', 'rukhsar'),
+      'colorpicker-opacity'       => esc_html__('Colorpicker Opacity', 'rukhsar'),
+      'css'                       => esc_html__('CSS', 'rukhsar'),
+      'custom-post-type-checkbox' => esc_html__('Custom Post Type Checkbox', 'rukhsar'),
+      'custom-post-type-select'   => esc_html__('Custom Post Type Select', 'rukhsar'),
+      'date-picker'               => esc_html__('Date Picker', 'rukhsar'),
+      'date-time-picker'          => esc_html__('Date Time Picker', 'rukhsar'),
+      'dimension'                 => esc_html__('Dimension', 'rukhsar'),
+      'gallery'                   => esc_html__('Gallery', 'rukhsar'),
+      'google-fonts'              => esc_html__('Google Fonts', 'rukhsar'),
+      'javascript'                => esc_html__('JavaScript', 'rukhsar'),
+      'link-color'                => esc_html__('Link Color', 'rukhsar'),
+      'list-item'                 => esc_html__('List Item', 'rukhsar'),
+      'measurement'               => esc_html__('Measurement', 'rukhsar'),
+      'numeric-slider'            => esc_html__('Numeric Slider', 'rukhsar'),
+      'on-off'                    => esc_html__('On/Off', 'rukhsar'),
+      'page-checkbox'             => esc_html__('Page Checkbox', 'rukhsar'),
+      'page-select'               => esc_html__('Page Select', 'rukhsar'),
+      'post-checkbox'             => esc_html__('Post Checkbox', 'rukhsar'),
+      'post-select'               => esc_html__('Post Select', 'rukhsar'),
+      'radio'                     => esc_html__('Radio', 'rukhsar'),
+      'radio-image'               => esc_html__('Radio Image', 'rukhsar'),
+      'select'                    => esc_html__('Select', 'rukhsar'),
+      'sidebar-select'            => esc_html__('Sidebar Select', 'rukhsar'),
+      'slider'                    => esc_html__('Slider', 'rukhsar'),
+      'social-links'              => esc_html__('Social Links', 'rukhsar'),
+      'spacing'                   => esc_html__('Spacing', 'rukhsar'),
+      'tab'                       => esc_html__('Tab', 'rukhsar'),
+      'tag-checkbox'              => esc_html__('Tag Checkbox', 'rukhsar'),
+      'tag-select'                => esc_html__('Tag Select', 'rukhsar'),
+      'taxonomy-checkbox'         => esc_html__('Taxonomy Checkbox', 'rukhsar'),
+      'taxonomy-select'           => esc_html__('Taxonomy Select', 'rukhsar'),
+      'text'                      => esc_html__('Text', 'rukhsar'),
+      'textarea'                  => esc_html__('Textarea', 'rukhsar'),
+      'textarea-simple'           => esc_html__('Textarea Simple', 'rukhsar'),
+      'textblock'                 => esc_html__('Textblock', 'rukhsar'),
+      'textblock-titled'          => esc_html__('Textblock Titled', 'rukhsar'),
+      'typography'                => esc_html__('Typography', 'rukhsar'),
+      'upload'                    => esc_html__('Upload', 'rukhsar')
     ) );
     
   }
@@ -3193,32 +3193,32 @@ if ( ! function_exists( 'ot_radio_images' ) ) {
     return apply_filters( 'ot_radio_images', array(
       array(
         'value'   => 'left-sidebar',
-        'label'   => esc_html__( 'Left Sidebar', 'cizarua' ),
+        'label'   => esc_html__( 'Left Sidebar', 'rukhsar' ),
         'src'     => OT_URL . 'assets/images/layout/left-sidebar.png'
       ),
       array(
         'value'   => 'right-sidebar',
-        'label'   => esc_html__( 'Right Sidebar', 'cizarua' ),
+        'label'   => esc_html__( 'Right Sidebar', 'rukhsar' ),
         'src'     => OT_URL . 'assets/images/layout/right-sidebar.png'
       ),
       array(
         'value'   => 'full-width',
-        'label'   => esc_html__( 'Full Width (no sidebar)', 'cizarua' ),
+        'label'   => esc_html__( 'Full Width (no sidebar)', 'rukhsar' ),
         'src'     => OT_URL . 'assets/images/layout/full-width.png'
       ),
       array(
         'value'   => 'dual-sidebar',
-        'label'   => esc_html__( 'Dual Sidebar', 'cizarua' ),
+        'label'   => esc_html__( 'Dual Sidebar', 'rukhsar' ),
         'src'     => OT_URL . 'assets/images/layout/dual-sidebar.png'
       ),
       array(
         'value'   => 'left-dual-sidebar',
-        'label'   => esc_html__( 'Left Dual Sidebar', 'cizarua' ),
+        'label'   => esc_html__( 'Left Dual Sidebar', 'rukhsar' ),
         'src'     => OT_URL . 'assets/images/layout/left-dual-sidebar.png'
       ),
       array(
         'value'   => 'right-dual-sidebar',
-        'label'   => esc_html__( 'Right Dual Sidebar', 'cizarua' ),
+        'label'   => esc_html__( 'Right Dual Sidebar', 'rukhsar' ),
         'src'     => OT_URL . 'assets/images/layout/right-dual-sidebar.png'
       )
     ), $field_id );
@@ -3248,7 +3248,7 @@ if ( ! function_exists( 'ot_list_item_settings' ) ) {
     $settings = apply_filters( 'ot_list_item_settings', array(
       array(
         'id'        => 'image',
-        'label'     => esc_html__( 'Image', 'cizarua' ),
+        'label'     => esc_html__( 'Image', 'rukhsar' ),
         'desc'      => '',
         'std'       => '',
         'type'      => 'upload',
@@ -3259,7 +3259,7 @@ if ( ! function_exists( 'ot_list_item_settings' ) ) {
       ),
       array(
         'id'        => 'link',
-        'label'     => esc_html__( 'Link', 'cizarua' ),
+        'label'     => esc_html__( 'Link', 'rukhsar' ),
         'desc'      => '',
         'std'       => '',
         'type'      => 'text',
@@ -3270,7 +3270,7 @@ if ( ! function_exists( 'ot_list_item_settings' ) ) {
       ),
       array(
         'id'        => 'description',
-        'label'     => esc_html__( 'Description', 'cizarua' ),
+        'label'     => esc_html__( 'Description', 'rukhsar' ),
         'desc'      => '',
         'std'       => '',
         'type'      => 'textarea-simple',
@@ -3309,19 +3309,19 @@ if ( ! function_exists( 'ot_slider_settings' ) ) {
       array(
         'name'      => 'image',
         'type'      => 'image',
-        'label'     => esc_html__( 'Image', 'cizarua' ),
+        'label'     => esc_html__( 'Image', 'rukhsar' ),
         'class'     => ''
       ),
       array(
         'name'      => 'link',
         'type'      => 'text',
-        'label'     => esc_html__( 'Link', 'cizarua' ),
+        'label'     => esc_html__( 'Link', 'rukhsar' ),
         'class'     => ''
       ),
       array(
         'name'      => 'description',
         'type'      => 'textarea',
-        'label'     => esc_html__( 'Description', 'cizarua' ),
+        'label'     => esc_html__( 'Description', 'rukhsar' ),
         'class'     => ''
       )
     ), $id );
@@ -3385,8 +3385,8 @@ if ( ! function_exists( 'ot_social_links_settings' ) ) {
     $settings = apply_filters( 'ot_social_links_settings', array(
       array(
         'id'        => 'name',
-        'label'     => esc_html__( 'Name', 'cizarua' ),
-        'desc'      => esc_html__( 'Enter the name of the social website.', 'cizarua' ),
+        'label'     => esc_html__( 'Name', 'rukhsar' ),
+        'desc'      => esc_html__( 'Enter the name of the social website.', 'rukhsar' ),
         'std'       => '',
         'type'      => 'text',
         'class'     => 'option-tree-setting-title'
@@ -3394,13 +3394,13 @@ if ( ! function_exists( 'ot_social_links_settings' ) ) {
       array(
         'id'        => 'title',
         'label'     => 'Title',
-        'desc'      => esc_html__( 'Enter the text shown in the title attribute of the link.', 'cizarua' ),
+        'desc'      => esc_html__( 'Enter the text shown in the title attribute of the link.', 'rukhsar' ),
         'type'      => 'text'
       ),
       array(
         'id'        => 'href',
         'label'     => 'Link',
-        'desc'      => sprintf( esc_html__( 'Enter a link to the profile or page on the social website. Remember to add the %s part to the front of the link.', 'cizarua' ), '<code>http://</code>' ),
+        'desc'      => sprintf( esc_html__( 'Enter a link to the profile or page on the social website. Remember to add the %s part to the front of the link.', 'rukhsar' ), '<code>http://</code>' ),
         'type'      => 'text',
       )
     ), $id );
@@ -3753,7 +3753,7 @@ if ( ! function_exists( 'ot_insert_css_with_markers' ) ) {
 
       // Can't write to the file so we error out
       if ( ! is_writable( $filepath ) ) {
-        add_settings_error( 'option-tree', 'dynamic_css', sprintf( esc_html__( 'Unable to write to file %s.', 'cizarua' ), '<code>' . $filepath . '</code>' ), 'error' );
+        add_settings_error( 'option-tree', 'dynamic_css', sprintf( esc_html__( 'Unable to write to file %s.', 'rukhsar' ), '<code>' . $filepath . '</code>' ), 'error' );
         return false;
       }
 
@@ -4023,17 +4023,17 @@ if ( ! function_exists( 'ot_sections_view' ) ) {
     <div class="option-tree-setting is-section">
       <div class="open">' . ( isset( $section['title'] ) ? esc_attr( $section['title'] ) : 'Section ' . ( $key + 1 ) ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'edit', 'cizarua' ) . '">
-          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'edit', 'rukhsar' ) . '">
+          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <div class="option-tree-setting-body">
         <div class="format-settings">
           <div class="format-setting type-text">
-            <div class="description">' . esc_html__( '<strong>Section Title</strong>: Displayed as a menu item on the Theme Options page.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Section Title</strong>: Displayed as a menu item on the Theme Options page.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][title]" value="' . ( isset( $section['title'] ) ? esc_attr( $section['title'] ) : '' ) . '" class="widefat option-tree-ui-input option-tree-setting-title section-title" autocomplete="off" />
             </div>
@@ -4041,7 +4041,7 @@ if ( ! function_exists( 'ot_sections_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text">
-            <div class="description">' . esc_html__( '<strong>Section ID</strong>: A unique lower case alphanumeric string, underscores allowed.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Section ID</strong>: A unique lower case alphanumeric string, underscores allowed.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][id]" value="' . ( isset( $section['id'] ) ? esc_attr( $section['id'] ) : '' ) . '" class="widefat option-tree-ui-input section-id" autocomplete="off" />
             </div>
@@ -4092,17 +4092,17 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
     <div class="option-tree-setting">
       <div class="open">' . ( isset( $setting['label'] ) ? esc_attr( $setting['label'] ) : 'Setting ' . ( $key + 1 ) ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'cizarua' ) . '">
-          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'rukhsar' ) . '">
+          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <div class="option-tree-setting-body">
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>Label</strong>: Displayed as the label of a form element on the Theme Options page.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Label</strong>: Displayed as the label of a form element on the Theme Options page.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][label]" value="' . ( isset( $setting['label'] ) ? esc_attr( $setting['label'] ) : '' ) . '" class="widefat option-tree-ui-input option-tree-setting-title" autocomplete="off" />
             </div>
@@ -4110,7 +4110,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>ID</strong>: A unique lower case alphanumeric string, underscores allowed.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>ID</strong>: A unique lower case alphanumeric string, underscores allowed.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][id]" value="' . ( isset( $setting['id'] ) ? esc_attr( $setting['id'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4118,7 +4118,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-select wide-desc">
-            <div class="description">' . esc_html__( '<strong>Type</strong>: Choose one of the available option types from the dropdown.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Type</strong>: Choose one of the available option types from the dropdown.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <select name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][type]" value="' . esc_attr( $type ) . '" class="option-tree-ui-select">
               ' . ot_loop_through_option_types( $type, $child ) . '                     
@@ -4129,7 +4129,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-textarea wide-desc">
-            <div class="description">' . esc_html__( '<strong>Description</strong>: Enter a detailed description for the users to read on the Theme Options page, HTML is allowed. This is also where you enter content for both the Textblock & Textblock Titled option types.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Description</strong>: Enter a detailed description for the users to read on the Theme Options page, HTML is allowed. This is also where you enter content for both the Textblock & Textblock Titled option types.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <textarea class="textarea" rows="10" cols="40" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][desc]">' . ( isset( $setting['desc'] ) ? esc_html( $setting['desc'] ) : '' ) . '</textarea>
             </div>
@@ -4137,29 +4137,29 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-textblock wide-desc">
-            <div class="description">' . esc_html__( '<strong>Choices</strong>: This will only affect the following option types: Checkbox, Radio, Select & Select Image.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Choices</strong>: This will only affect the following option types: Checkbox, Radio, Select & Select Image.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <ul class="option-tree-setting-wrap option-tree-sortable" data-name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . ']">
                 ' . ( isset( $setting['choices'] ) ? ot_loop_through_choices( $name . '[' . $key . ']', $setting['choices'] ) : '' ) . '
               </ul>
-              <a href="javascript:void(0);" class="option-tree-choice-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Choice', 'cizarua' ) . '</a>
+              <a href="javascript:void(0);" class="option-tree-choice-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Choice', 'rukhsar' ) . '</a>
             </div>
           </div>
         </div>
         <div class="format-settings">
           <div class="format-setting type-textblock wide-desc">
-            <div class="description">' . esc_html__( '<strong>Settings</strong>: This will only affect the List Item option type.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Settings</strong>: This will only affect the List Item option type.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <ul class="option-tree-setting-wrap option-tree-sortable" data-name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . ']">
                 ' . ( isset( $setting['settings'] ) ? ot_loop_through_sub_settings( $name . '[' . $key . '][settings]', $setting['settings'] ) : '' ) . '
               </ul>
-              <a href="javascript:void(0);" class="option-tree-list-item-setting-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Setting', 'cizarua' ) . '</a>
+              <a href="javascript:void(0);" class="option-tree-list-item-setting-add option-tree-ui-button button hug-left">' . esc_html__( 'Add Setting', 'rukhsar' ) . '</a>
             </div>
           </div>
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>Standard</strong>: Setting the standard value for your option only works for some option types. Read the <code>OptionTree->Documentation</code> for more information on which ones.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Standard</strong>: Setting the standard value for your option only works for some option types. Read the <code>OptionTree->Documentation</code> for more information on which ones.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               ' . $std_form_element . '
             </div>
@@ -4167,7 +4167,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>Rows</strong>: Enter a numeric value for the number of rows in your textarea. This will only affect the following option types: CSS, Textarea, & Textarea Simple.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Rows</strong>: Enter a numeric value for the number of rows in your textarea. This will only affect the following option types: CSS, Textarea, & Textarea Simple.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][rows]" value="' . ( isset( $setting['rows'] ) ? esc_attr( $setting['rows'] ) : '' ) . '" class="widefat option-tree-ui-input" />
             </div>
@@ -4175,7 +4175,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>Post Type</strong>: Add a comma separated list of post type like \'post,page\'. This will only affect the following option types: Custom Post Type Checkbox, & Custom Post Type Select.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Post Type</strong>: Add a comma separated list of post type like \'post,page\'. This will only affect the following option types: Custom Post Type Checkbox, & Custom Post Type Select.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][post_type]" value="' . ( isset( $setting['post_type'] ) ? esc_attr( $setting['post_type'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4183,7 +4183,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>Taxonomy</strong>: Add a comma separated list of any registered taxonomy like \'category,post_tag\'. This will only affect the following option types: Taxonomy Checkbox, & Taxonomy Select.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Taxonomy</strong>: Add a comma separated list of any registered taxonomy like \'category,post_tag\'. This will only affect the following option types: Taxonomy Checkbox, & Taxonomy Select.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][taxonomy]" value="' . ( isset( $setting['taxonomy'] ) ? esc_attr( $setting['taxonomy'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4191,7 +4191,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>Min, Max, & Step</strong>: Add a comma separated list of options in the following format <code>0,100,1</code> (slide from <code>0-100</code> in intervals of <code>1</code>). The three values represent the minimum, maximum, and step options and will only affect the Numeric Slider option type.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Min, Max, & Step</strong>: Add a comma separated list of options in the following format <code>0,100,1</code> (slide from <code>0-100</code> in intervals of <code>1</code>). The three values represent the minimum, maximum, and step options and will only affect the Numeric Slider option type.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][min_max_step]" value="' . ( isset( $setting['min_max_step'] ) ? esc_attr( $setting['min_max_step'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4199,7 +4199,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . esc_html__( '<strong>CSS Class</strong>: Add and optional class to this option type.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>CSS Class</strong>: Add and optional class to this option type.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][class]" value="' . ( isset( $setting['class'] ) ? esc_attr( $setting['class'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4207,7 +4207,7 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text wide-desc">
-            <div class="description">' . sprintf( esc_html__( '<strong>Condition</strong>: Add a comma separated list (no spaces) of conditions in which the field will be visible, leave this setting empty to always show the field. In these examples, <code>value</code> is a placeholder for your condition, which can be in the form of %s.', 'cizarua' ), '<code>field_id:is(value)</code>, <code>field_id:not(value)</code>, <code>field_id:contains(value)</code>, <code>field_id:less_than(value)</code>, <code>field_id:less_than_or_equal_to(value)</code>, <code>field_id:greater_than(value)</code>, or <code>field_id:greater_than_or_equal_to(value)</code>' ) . '</div>
+            <div class="description">' . sprintf( esc_html__( '<strong>Condition</strong>: Add a comma separated list (no spaces) of conditions in which the field will be visible, leave this setting empty to always show the field. In these examples, <code>value</code> is a placeholder for your condition, which can be in the form of %s.', 'rukhsar' ), '<code>field_id:is(value)</code>, <code>field_id:not(value)</code>, <code>field_id:contains(value)</code>, <code>field_id:less_than(value)</code>, <code>field_id:less_than_or_equal_to(value)</code>, <code>field_id:greater_than(value)</code>, or <code>field_id:greater_than_or_equal_to(value)</code>' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][condition]" value="' . ( isset( $setting['condition'] ) ? esc_attr( $setting['condition'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4215,11 +4215,11 @@ if ( ! function_exists( 'ot_settings_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-select wide-desc">
-            <div class="description">' . esc_html__( '<strong>Operator</strong>: Choose the logical operator to compute the result of the conditions.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Operator</strong>: Choose the logical operator to compute the result of the conditions.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <select name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][operator]" value="' . $operator . '" class="option-tree-ui-select">
-                <option value="and" ' . selected( $operator, 'and', false ) . '>' . esc_html__( 'and', 'cizarua' ) . '</option>
-                <option value="or" ' . selected( $operator, 'or', false ) . '>' . esc_html__( 'or', 'cizarua' ) . '</option>
+                <option value="and" ' . selected( $operator, 'and', false ) . '>' . esc_html__( 'and', 'rukhsar' ) . '</option>
+                <option value="or" ' . selected( $operator, 'or', false ) . '>' . esc_html__( 'or', 'rukhsar' ) . '</option>
               </select>
             </div>
           </div>
@@ -4255,17 +4255,17 @@ if ( ! function_exists( 'ot_choices_view' ) ) {
     <div class="option-tree-setting">
       <div class="open">' . ( isset( $choice['label'] ) ? esc_attr( $choice['label'] ) : 'Choice ' . ( $key + 1 ) ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'cizarua' ) . '">
-          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'rukhsar' ) . '">
+          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <div class="option-tree-setting-body">
         <div class="format-settings">
           <div class="format-setting-label">
-            <h5>' . esc_html__( 'Label', 'cizarua' ) . '</h5>
+            <h5>' . esc_html__( 'Label', 'rukhsar' ) . '</h5>
           </div>
           <div class="format-setting type-text wide-desc">
             <div class="format-setting-inner">
@@ -4275,7 +4275,7 @@ if ( ! function_exists( 'ot_choices_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting-label">
-            <h5>' . esc_html__( 'Value', 'cizarua' ) . '</h5>
+            <h5>' . esc_html__( 'Value', 'rukhsar' ) . '</h5>
           </div>
           <div class="format-setting type-text wide-desc">
             <div class="format-setting-inner">
@@ -4285,7 +4285,7 @@ if ( ! function_exists( 'ot_choices_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting-label">
-            <h5>' . esc_html__( 'Image Source (Radio Image only)', 'cizarua' ) . '</h5>
+            <h5>' . esc_html__( 'Image Source (Radio Image only)', 'rukhsar' ) . '</h5>
           </div>
           <div class="format-setting type-text wide-desc">
             <div class="format-setting-inner">
@@ -4321,17 +4321,17 @@ if ( ! function_exists( 'ot_contextual_help_view' ) ) {
     <div class="option-tree-setting">
       <div class="open">' . ( isset( $content['title'] ) ? esc_attr( $content['title'] ) : 'Content ' . ( $key + 1 ) ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'cizarua' ) . '">
-          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'rukhsar' ) . '">
+          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <div class="option-tree-setting-body">
         <div class="format-settings">
           <div class="format-setting type-text no-desc">
-            <div class="description">' . esc_html__( '<strong>Title</strong>: Displayed as a contextual help menu item on the Theme Options page.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Title</strong>: Displayed as a contextual help menu item on the Theme Options page.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][title]" value="' . ( isset( $content['title'] ) ? esc_attr( $content['title'] ) : '' ) . '" class="widefat option-tree-ui-input option-tree-setting-title" autocomplete="off" />
             </div>
@@ -4339,7 +4339,7 @@ if ( ! function_exists( 'ot_contextual_help_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-text no-desc">
-            <div class="description">' . esc_html__( '<strong>ID</strong>: A unique lower case alphanumeric string, underscores allowed.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>ID</strong>: A unique lower case alphanumeric string, underscores allowed.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <input type="text" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][id]" value="' . ( isset( $content['id'] ) ? esc_attr( $content['id'] ) : '' ) . '" class="widefat option-tree-ui-input" autocomplete="off" />
             </div>
@@ -4347,7 +4347,7 @@ if ( ! function_exists( 'ot_contextual_help_view' ) ) {
         </div>
         <div class="format-settings">
           <div class="format-setting type-textarea no-desc">
-            <div class="description">' . esc_html__( '<strong>Content</strong>: Enter the HTML content about this contextual help item displayed on the Theme Option page for end users to read.', 'cizarua' ) . '</div>
+            <div class="description">' . esc_html__( '<strong>Content</strong>: Enter the HTML content about this contextual help item displayed on the Theme Option page for end users to read.', 'rukhsar' ) . '</div>
             <div class="format-setting-inner">
               <textarea class="textarea" rows="15" cols="40" name="' . esc_attr( $name ) . '[' . esc_attr( $key ) . '][content]">' . ( isset( $content['content'] ) ? esc_html( $content['content'] ) : '' ) . '</textarea>
             </div>
@@ -4378,13 +4378,13 @@ if ( ! function_exists( 'ot_layout_view' ) ) {
 
     return '
     <div class="option-tree-setting">
-      <div class="open">' . ( isset( $key ) ? esc_attr( $key ) : esc_html__( 'Layout', 'cizarua' ) ) . '</div>
+      <div class="open">' . ( isset( $key ) ? esc_attr( $key ) : esc_html__( 'Layout', 'rukhsar' ) ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-layout-activate option-tree-ui-button button left-item' . ( $active_layout == $key ? ' active' : '' ) . '" title="' . esc_html__( 'Activate', 'cizarua' ) . '">
-          <span class="icon ot-icon-square-o"></span>' . esc_html__( 'Activate', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-layout-activate option-tree-ui-button button left-item' . ( $active_layout == $key ? ' active' : '' ) . '" title="' . esc_html__( 'Activate', 'rukhsar' ) . '">
+          <span class="icon ot-icon-square-o"></span>' . esc_html__( 'Activate', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="'. esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="'. esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <input type="hidden" name="' . ot_layouts_id() . '[' . esc_attr( $key ) . ']" value="' . $data . '" />
@@ -4417,7 +4417,7 @@ if ( ! function_exists( 'ot_list_item_view' ) ) {
     $required_setting = array(
       array(
         'id'        => 'title',
-        'label'     => esc_html__( 'Title', 'cizarua' ),
+        'label'     => esc_html__( 'Title', 'rukhsar' ),
         'desc'      => '',
         'std'       => '',
         'type'      => 'text',
@@ -4449,11 +4449,11 @@ if ( ! function_exists( 'ot_list_item_view' ) ) {
     <div class="option-tree-setting">
       <div class="open">' . ( isset( $list_item['title'] ) ? esc_attr( $list_item['title'] ) : '' ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'cizarua' ) . '">
-          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'rukhsar' ) . '">
+          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <div class="option-tree-setting-body">';
@@ -4602,11 +4602,11 @@ if ( ! function_exists( 'ot_social_links_view' ) ) {
     <div class="option-tree-setting">
       <div class="open">' . ( isset( $list_item['name'] ) ? esc_attr( $list_item['name'] ) : '' ) . '</div>
       <div class="button-section">
-        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'cizarua' ) . '">
-          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-edit option-tree-ui-button button left-item" title="' . esc_html__( 'Edit', 'rukhsar' ) . '">
+          <span class="icon ot-icon-pencil"></span>' . esc_html__( 'Edit', 'rukhsar' ) . '
         </a>
-        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'cizarua' ) . '">
-          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'cizarua' ) . '
+        <a href="javascript:void(0);" class="option-tree-setting-remove option-tree-ui-button button button-secondary light right-item" title="' . esc_html__( 'Delete', 'rukhsar' ) . '">
+          <span class="icon ot-icon-trash-o"></span>' . esc_html__( 'Delete', 'rukhsar' ) . '
         </a>
       </div>
       <div class="option-tree-setting-body">';
@@ -4757,7 +4757,7 @@ if ( ! function_exists( 'ot_theme_options_layouts_form' ) ) {
         /* add new layout */
         echo '<input type="text" name="' . ot_layouts_id() . '[_add_new_layout_]" value="" class="widefat option-tree-ui-input" autocomplete="off" />';
         
-        echo '<button type="submit" class="option-tree-ui-button button button-primary save-layout" title="' . esc_html__( 'New Layout', 'cizarua' ) . '">' . esc_html__( 'New Layout', 'cizarua' ) . '</button>';
+        echo '<button type="submit" class="option-tree-ui-button button button-primary save-layout" title="' . esc_html__( 'New Layout', 'rukhsar' ) . '">' . esc_html__( 'New Layout', 'rukhsar' ) . '</button>';
       
       echo '</div>';
       
@@ -5463,7 +5463,7 @@ function ot_meta_box_post_format_gallery( $pages = 'post' ) {
   
   return apply_filters( 'ot_meta_box_post_format_gallery', array(
     'id'        => 'ot-post-format-gallery',
-    'title'     => esc_html__( 'Gallery', 'cizarua' ),
+    'title'     => esc_html__( 'Gallery', 'rukhsar' ),
     'desc'      => '',
     'pages'     => $pages,
     'context'   => 'side',
@@ -5503,7 +5503,7 @@ function ot_meta_box_post_format_link( $pages = 'post' ) {
   
   return apply_filters( 'ot_meta_box_post_format_link', array(
     'id'        => 'ot-post-format-link',
-    'title'     => esc_html__( 'Link', 'cizarua' ),
+    'title'     => esc_html__( 'Link', 'rukhsar' ),
     'desc'      => '',
     'pages'     => $pages,
     'context'   => 'side',
@@ -5512,14 +5512,14 @@ function ot_meta_box_post_format_link( $pages = 'post' ) {
       array(
         'id'      => '_format_link_url',
         'label'   => '',
-        'desc'    => esc_html__( 'Link URL', 'cizarua' ),
+        'desc'    => esc_html__( 'Link URL', 'rukhsar' ),
         'std'     => '',
         'type'    => 'text'
       ),
       array(
         'id'      => '_format_link_title',
         'label'   => '',
-        'desc'    => esc_html__( 'Link Title', 'cizarua' ),
+        'desc'    => esc_html__( 'Link Title', 'rukhsar' ),
         'std'     => '',
         'type'    => 'text'
       )
@@ -5549,7 +5549,7 @@ function ot_meta_box_post_format_quote( $pages = 'post' ) {
 
   return apply_filters( 'ot_meta_box_post_format_quote', array(
     'id'        => 'ot-post-format-quote',
-    'title'     => esc_html__( 'Quote', 'cizarua' ),
+    'title'     => esc_html__( 'Quote', 'rukhsar' ),
     'desc'      => '',
     'pages'     => $pages,
     'context'   => 'side',
@@ -5558,28 +5558,28 @@ function ot_meta_box_post_format_quote( $pages = 'post' ) {
       array(
         'id'      => '_format_quote_source_name',
         'label'   => '',
-        'desc'    => esc_html__( 'Source Name (ex. author, singer, actor)', 'cizarua' ),
+        'desc'    => esc_html__( 'Source Name (ex. author, singer, actor)', 'rukhsar' ),
         'std'     => '',
         'type'    => 'text'
       ),
       array(
         'id'      => '_format_quote_source_url',
         'label'   => '',
-        'desc'    => esc_html__( 'Source URL', 'cizarua' ),
+        'desc'    => esc_html__( 'Source URL', 'rukhsar' ),
         'std'     => '',
         'type'    => 'text'
       ),
       array(
         'id'      => '_format_quote_source_title',
         'label'   => '',
-        'desc'    => esc_html__( 'Source Title (ex. book, song, movie)', 'cizarua' ),
+        'desc'    => esc_html__( 'Source Title (ex. book, song, movie)', 'rukhsar' ),
         'std'     => '',
         'type'    => 'text'
       ),
       array(
         'id'      => '_format_quote_source_date',
         'label'   => '',
-        'desc'    => esc_html__( 'Source Date', 'cizarua' ),
+        'desc'    => esc_html__( 'Source Date', 'rukhsar' ),
         'std'     => '',
         'type'    => 'text'
       )
@@ -5609,7 +5609,7 @@ function ot_meta_box_post_format_video( $pages = 'post' ) {
   
   return apply_filters( 'ot_meta_box_post_format_video', array(
     'id'        => 'ot-post-format-video',
-    'title'     => esc_html__( 'Video', 'cizarua' ),
+    'title'     => esc_html__( 'Video', 'rukhsar' ),
     'desc'      => '',
     'pages'     => $pages,
     'context'   => 'side',
@@ -5618,7 +5618,7 @@ function ot_meta_box_post_format_video( $pages = 'post' ) {
       array(
         'id'      => '_format_video_embed',
         'label'   => '',
-        'desc'    => sprintf( esc_html__( 'Embed video from services like Youtube, Vimeo, or Hulu. You can find a list of supported oEmbed sites in the %1$s. Alternatively, you could use the built-in %2$s shortcode.', 'cizarua' ), '<a href="http://codex.wordpress.org/Embeds" target="_blank">' . esc_html__( 'Wordpress Codex', 'cizarua' ) .'</a>', '<code>[video]</code>' ),
+        'desc'    => sprintf( esc_html__( 'Embed video from services like Youtube, Vimeo, or Hulu. You can find a list of supported oEmbed sites in the %1$s. Alternatively, you could use the built-in %2$s shortcode.', 'rukhsar' ), '<a href="http://codex.wordpress.org/Embeds" target="_blank">' . esc_html__( 'Wordpress Codex', 'rukhsar' ) .'</a>', '<code>[video]</code>' ),
         'std'     => '',
         'type'    => 'textarea'
       )
@@ -5648,7 +5648,7 @@ function ot_meta_box_post_format_audio( $pages = 'post' ) {
   
   return apply_filters( 'ot_meta_box_post_format_audio', array(
     'id'        => 'ot-post-format-audio',
-    'title'     => esc_html__( 'Audio', 'cizarua' ),
+    'title'     => esc_html__( 'Audio', 'rukhsar' ),
     'desc'      => '',
     'pages'     => $pages,
     'context'   => 'side',
@@ -5657,7 +5657,7 @@ function ot_meta_box_post_format_audio( $pages = 'post' ) {
       array(
         'id'      => '_format_audio_embed',
         'label'   => '',
-        'desc'    => sprintf( esc_html__( 'Embed audio from services like SoundCloud and Rdio. You can find a list of supported oEmbed sites in the %1$s. Alternatively, you could use the built-in %2$s shortcode.', 'cizarua' ), '<a href="http://codex.wordpress.org/Embeds" target="_blank">' . esc_html__( 'Wordpress Codex', 'cizarua' ) .'</a>', '<code>[audio]</code>' ),
+        'desc'    => sprintf( esc_html__( 'Embed audio from services like SoundCloud and Rdio. You can find a list of supported oEmbed sites in the %1$s. Alternatively, you could use the built-in %2$s shortcode.', 'rukhsar' ), '<a href="http://codex.wordpress.org/Embeds" target="_blank">' . esc_html__( 'Wordpress Codex', 'rukhsar' ) .'</a>', '<code>[audio]</code>' ),
         'std'     => '',
         'type'    => 'textarea'
       )

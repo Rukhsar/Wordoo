@@ -545,95 +545,6 @@ function rukhsar_custom_theme_options() {
                 )
             ),
             array(
-                'id'          => 'home_setting',
-                'label'       => esc_html__('Home Section Background Setting', 'rukhsar'),
-                'desc'        => esc_html__('You can set the slider/video background at slider and video background settings.', 'rukhsar'),
-                'std'         => 'slider_bg_home',
-                'type'        => 'select',
-                'section'     => 'custom_layout_sec',
-                'rows'        => '',
-                'post_type'   => '',
-                'taxonomy'    => '',
-                'min_max_step'=> '',
-                'class'       => '',
-                'choices'     => array(
-                    array(
-                        'value'       => 'slider_bg_home',
-                        'label'       => esc_html__('Slider Background', 'rukhsar'),
-                        'src'         => ''
-                    ),
-                    array(
-                        'value'       => 'video_bg_home',
-                        'label'       => esc_html__('Video Background', 'rukhsar'),
-                        'src'         => ''
-                    ),
-                    array(
-                        'value'       => 'youtube_bg_home',
-                        'label'       => esc_html__('Youtube Video Background', 'rukhsar'),
-                        'src'         => ''
-                    )
-                ),
-            ),
-            array(
-                'id'          => 'text_block_video_section',
-                'label'       => esc_html__('THE SETTING ONLY FOR VIDEO BACKGROUND IN HOMEPAGE VIDEO TEMPLATE', 'rukhsar' ),
-                'desc'        => esc_html__('You can set your video here. This is only affect on homepage with <strong> Homepage Video</strong> template', 'rukhsar' ),
-                'std'         => '',
-                'type'        => 'textblock-titled',
-                'section'     => 'video_bg_setting_section',
-                'rows'        => '',
-                'post_type'   => '',
-                'taxonomy'    => '',
-                'min_max_step'=> '',
-                'class'       => '',
-                'condition'   => '',
-                'operator'    => 'and'
-            ),
-            array(
-                'id'          => 'video_link',
-                'label'       => esc_html__('Video Source', 'rukhsar' ),
-                'desc'        => esc_html__('Insert your video source here (only directlink). eg. http://yoursite.com/video.mp4', 'rukhsar' ),
-                'std'         => '',
-                'type'        => 'text',
-                'section'     => 'video_bg_setting_section',
-                'rows'        => '',
-                'post_type'   => '',
-                'taxonomy'    => '',
-                'min_max_step'=> '',
-                'class'       => '',
-                'condition'   => '',
-                'operator'    => 'and'
-            ),
-            array(
-                'id'          => 'video_mute',
-                'label'       => esc_html__('Video Mute', 'rukhsar' ),
-                'desc'        => esc_html__('You can turn on/off video audio (mute)', 'rukhsar' ),
-                'std'         => '',
-                'type'        => 'on-off',
-                'section'     => 'video_bg_setting_section',
-                'rows'        => '',
-                'post_type'   => '',
-                'taxonomy'    => '',
-                'min_max_step'=> '',
-                'class'       => '',
-                'condition'   => '',
-                'operator'    => 'and'
-            ),
-
-            array(
-                'id'          => 'home_setting_box',
-                'label'       => 'box text home setting',
-                'desc'        => esc_html__('THIS SETTING ONLY APPLIES ON PAGE WITH  "HOMEPAGE CUSTOM LAYOUT" TEMPLATE','rukhsar'),
-                'std'         => '',
-                'type'        => 'textblock',
-                'section'     => 'custom_layout_sec',
-                'rows'        => '',
-                'post_type'   => '',
-                'taxonomy'    => '',
-                'min_max_step'=> '',
-                'class'       => ''
-            ),
-            array(
                 'id'          => 'custom_layout',
                 'label'       => esc_html__('Section List','rukhsar'),
                 'desc'        => esc_html__('Create your sections list here.<br/> Noted: <b>The title</b> on custom section will be the <b>id/anchor</b> to put in your homepage menu. <br/>
@@ -661,7 +572,7 @@ function rukhsar_custom_theme_options() {
                         'choices'     => array(
                             array(
                                 'value'       => 'about_content',
-                                'label'       => esc_html__('About & Team Section', 'rukhsar'),
+                                'label'       => esc_html__('About Section', 'rukhsar'),
                                 'src'         => ''
                             ),
                             array(

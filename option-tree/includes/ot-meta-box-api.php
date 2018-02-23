@@ -228,7 +228,7 @@ if ( ! class_exists( 'OT_Meta_Box' ) ) {
             $required_setting = array(
               array(
                 'id'        => 'title',
-                'label'     => esc_html__( 'Title', 'cizarua' ),
+                'label'     => esc_html__( 'Title', 'rukhsar' ),
                 'desc'      => '',
                 'std'       => '',
                 'type'      => 'text',
