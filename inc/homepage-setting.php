@@ -5,4 +5,3 @@ function rukhsar_homepage_script() {
 		wp_enqueue_script( 'rukhsar_imagebg', get_template_directory_uri() . '/assets/js/imagebg.js',array(),'', 'in_footer');
 	} 
 }
-
